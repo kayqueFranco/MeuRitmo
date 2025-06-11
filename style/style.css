@@ -10,6 +10,8 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+/* --------------- Desktop --------------- */
+
 header {
     height: 120px;
     position: relative;
@@ -20,10 +22,10 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 120px;
-    z-index: 10;
+    width: 100%;
 }
 
-#navbar img {
+.logo {
     width: 200px;
     height: 200px;
     margin-left: 30px;
@@ -31,26 +33,36 @@ header {
 
 #navbar ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
-    gap: 20px;
 }
 
-nav ul li {
-    cursor: pointer;
+#navbar ul li {
+    margin: 0 15px;
 }
 
 #navbar ul li a {
-    text-decoration: none;
     color: #000;
-    font-weight: 700;
-    margin-right: 60px;
-    text-transform: uppercase;
-    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding-bottom: 5px;
+}
+
+#navbar ul li a.active {
+    border-bottom: 3px solid #3e2b8b;
+} 
+
+#navbar .menu-btn i {
     cursor: pointer;
+    display: none;
+}
+
+#ladoEsq span {
+    color: #3e2b8b;
 }
 
 #ladoDir img {
-  
     position: absolute;
     right: 40px;
     top: 70px;
@@ -67,7 +79,7 @@ nav ul li {
 }
 
 #ladoEsq p {
-    max-width: 320px;
+    max-width: 380px;
     margin-bottom: 30px;
 }
 
@@ -77,10 +89,15 @@ nav ul li {
     color: #fff;
     font-weight: 600;
     border-radius: 10px;
+    background-color: #3e2b8b;
+}
+
+.btn-default {
+    margin-right: 20px;
     background-color: #2cb17b;
 }
 
-#bola {
+#shape {
     position: absolute;
     left: -300px;
     width: 1200px;
@@ -89,5 +106,50 @@ nav ul li {
     background-color: #2cb17c2d;
 }
 
+@media (max-width: 920px){
+    #navbar .menu-btn i {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-right: 20px;
+    }
 
+    #navbar ul {
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        background-color: #2cb17c1c;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 2;
+    }
 
+    #navbar ul.open {
+        left: 0;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        margin: 50px 0px;
+    }
+
+    #navbar ul li a.active {
+        border-bottom: none;
+        color: #000;
+    } 
+
+    #ladoDir img {
+        display: none;
+    }
+
+    #ladoEsq {
+        z-index: 1;
+    }
+
+    #shape {
+        display: none;
+    }
+}

@@ -7,34 +7,53 @@
     <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
     <title>MeuRitmo</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!--Inicio do cabeçalho-->
     <header>
-        <div id="bola"></div>
         <nav id="navbar">
             <img class="logo" src="img/MeuRitmo-logo-Photoroom.png" alt="">
+
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars" onclick="menuShow()"></i>
+            </div>
+
             <ul>
-                <li><a href="cadastro.html">cadastro</a></li>
+                <li><a class="active" href="#">jdefhefhe</a></li>
                 <li><a href="#">Meu gráfico</a></li>
                 <li><a href="#">Sobre</a></li>
+                <a class="botao" href="#">Cadastrar</a>
             </ul>
+
         </nav>
-
-        <div id="ladoDir">
-            <img src="img/bannertxt.png" alt="">
-        </div>
-
-        <div id="ladoEsq">
-            <h1>Como vai sua saúde?</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium saepe, iste quasi libero at expedita ipsam eum, error nam deleniti aperiam culpa corrupti doloribus itaque fuga provident magni dolore. Aut.</p>
-
-            <a class="botao" href="#">Cadastre</a>
-        </div>
-        
     </header>
+    <!--Fim do cabeçalho-->
+
+
+
+
+    <!--Inicio do main-->
+    <main>
+        <section id="banner-principal">
+            <div id="shape"></div>
+            <div id="ladoDir">
+                <img src="img/bannertxt.png" alt="">
+            </div>
+
+            <div id="ladoEsq">
+                <h1>Como vai sua <span>saúde?</span></h1>
+
+                <p>Transforme sua rotina com recomendações de saúde feitas especialmente para voçê. Entenda seus
+                    hábitos, melhore seu bem-estar e alcance seus objetivos de forma inteligente!</p>
+
+                <a class="botao" href="#">Começar agora</a>
+            </div>
+        </section>
+    </main>
+    <!--Fim do main-->
 
     <script src="js/script.js"></script>
 </body>
