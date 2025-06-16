@@ -10,68 +10,108 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* --------------- Desktop --------------- */
-
-header {
-    height: 120px;
-    position: relative;
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
-#navbar {
+/* --------------- Celular Vertical --------------- */
+
+header {
+    height: 110px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
-    width: 100%;
+    margin: 0 auto;
+    color: #000;
 }
 
 .logo {
-    width: 200px;
-    height: 200px;
-    margin-left: 30px;
+    width: 180px;
 }
 
-#navbar ul {
+#navbar {
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-icon {
+    display: block;
+    z-index: 20;
+    background-color: transparent;
+}
+
+#menu-icon img {
+    width: 30px;
+    margin-right: 20px;
+}
+
+.nav-list {
+    position: fixed;
+    background-color: rgb(239, 239, 239);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 100%;
     list-style: none;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    z-index: 20;
 }
 
-#navbar ul li {
-    margin: 0 15px;
-}
-
-#navbar ul li a {
-    color: #000;
-    text-decoration: none;
+.nav-list li {
+    transform: translate(-23%, 0%);
     font-weight: 600;
-    transition: all 0.3s ease;
-    padding-bottom: 5px;
 }
 
-#navbar ul li a.active {
-    border-bottom: 3px solid #3e2b8b;
-} 
+.nav-list li:first-child {
+    margin-top: 120px;
+}
 
-#navbar .menu-btn i {
-    cursor: pointer;
+.nav-list.ativo {
+    left: 50%;
+}
+
+.btn-cadastrar {
+    background-color: #2cb17c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+/* Fim do cabeçalho */
+
+/* Banner */
+
+#ladoDir img {
     display: none;
 }
 
+#ladoEsq {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+#shape {
+    display: none;
+}
+
+/* ---------- Fim do cabeçalho ---------- */
+
 #ladoEsq span {
     color: #3e2b8b;
-}
-
-#ladoDir img {
-    position: absolute;
-    right: 40px;
-    top: 70px;
-}
-
-#ladoEsq {
-    position: absolute;
-    left: 90px;
-    top: 230px;
 }
 
 #ladoEsq h1 {
@@ -97,60 +137,238 @@ header {
     background-color: #2cb17b;
 }
 
-#shape {
-    position: absolute;
-    left: -300px;
-    top: 40px;
-    width: 1200px;
-    height: 1200px;
-    border-radius: 50%;
-    background-color: #2cb17c2d;
+/* ---------- Inicio da area de cards ---------- */
+#cards {
+    margin-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-@media (max-width: 920px){
-    #navbar .menu-btn i {
-        display: block;
-        font-size: 1.5rem;
-        cursor: pointer;
-        margin-right: 20px;
-    }
+#cards h2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
-    #navbar ul {
-        position: absolute;
-        top: 80px;
-        left: 0px;
-        background-color: #2cb17c1c;
-        height: 100vh;
-        width: 100%;
-        text-align: center;
-        display: block;
-        transition: all 0.3s ease;
-        z-index: 2;
-    }
+.cards {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 3px 1px 8px 0px black;
+    margin: 30px 0px;
+    max-width: 300px;
+    height: 380px;
+    text-align: center;
+    padding: 20px;
+}
 
-    #navbar ul.open {
-        left: 0;
-    }
+.cards img {
+    width: 80px;
+    margin-top: 20px;
+}
 
-    #navbar ul li {
-        width: 100%;
-        margin: 50px 0px;
-    }
+.cards h3 {
+    margin: 25px 0px;
+    max-width: 250px;
+}
 
-    #navbar ul li a.active {
-        border-bottom: none;
-        color: #000;
-    } 
+#cards span {
+   color: #3e2b8b;
+}
 
-    #ladoDir img {
-        display: none;
-    }
+.cards p {
+    margin: 25px 0px 35px 0px;
+}
 
+/* ---------- FIM da area de cards ---------- */
+
+/* Celular Horizontal */
+@media (min-width: 576px) {
     #ladoEsq {
-        z-index: 1;
+        max-width: 450px;
+    }
+}
+
+
+/* Tablet Portrait */
+@media (min-width: 768px) {
+
+    /* Banner */
+    #ladoEsq {
+        max-width: 500px;
+        margin-top: 30px;
     }
 
     #shape {
+        display: flex; 
+        position: absolute;
+        left: -150px;
+        top: -150px;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background-color: #2cb17c2d;
+    }
+
+    /* ---------- Inicio da area de cards ---------- */
+    .containerCards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cards-dicas h2 {
+        margin-bottom: 35px;
+        letter-spacing: 2px;
+    }
+
+    .cards {
+        margin: 0px 10px;
+        max-width: 300px;
+        height: 300px;
+        padding: 15px;
+    }
+
+    .cards img {
+        width: 70px;
+    }
+
+    .cards h3 {
+        margin: 25px 0px;
+        max-width: 250px;
+    }
+
+    .cards p {
+        font-size: 13px;
+        max-width: 2580px;
+        margin: 25px 0px 40px 0px;
+    }
+
+    /* ---------- FIM da area de cards ---------- */
+}
+
+
+/* Tablet Landscape */
+@media (min-width: 992px) {
+
+    /* Cabeçalho */
+    .logo {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* Banner */
+    #shape {
+        left: -60px;
+        top: -320px;
+        width: 900px;
+        height: 900px;
+    }
+
+    /* ---------- Inicio da area de cards ---------- */
+    #cards-dicas h2 {
+        margin-bottom: 45px;
+    }
+
+    .cards {
+        margin: 0px 20px;
+        max-width: 280px;
+        height: 350px;
+        padding: 20px;
+        z-index: 2;
+    }
+
+    .cards img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .cards h3 {
+        margin: 25px 0px;
+        padding-top: 30px;
+        max-width: 360px;
+    }
+
+    .cards p {
+        max-width: 280px;
+        margin: 25px 0px 40px 0px;
+    }
+
+    /* ---------- FIM da area de cards ---------- */
+
+}
+
+
+/* PCS e Notebooks */
+@media (min-width: 1200px) {
+
+    /* Cabeçalho */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+        gap: 20px;
+        position: static;
+        background-color: transparent;
+    }
+
+    .nav-list li:first-child {
+        margin-top: 0px;
+    }
+
+    .nav-item.active a {
+        border-bottom: 3px solid #3e2b8b;
+        margin-right: 30px;
+    }
+
+    .btn-cadastrar {
+        margin: 0px 20px 0px 50px;
+    }
+
+    #menu-icon {
         display: none;
     }
+
+    #menu-icon img {
+        width: 0px;
+        margin-right: 0px;
+    }
+
+    /* Fim - Cabeçalho */
+
+    #ladoDir img {
+        top: -5px;
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 70px;
+    }
+
+    #ladoEsq {
+        position: absolute;
+        left: 90px;
+        top: 230px;
+    }
+
+    #shape {
+        left: -300px;
+        top: 20px;
+        width: 1200px;
+        height: 1200px;
+    }
+
+    /*Fim do cabeçalho*/
+
+    .card img {
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    
+    
 }

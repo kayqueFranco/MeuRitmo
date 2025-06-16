@@ -1,10 +1,12 @@
-var ul = document.querySelector('#navbar ul');
-var menuBtn = document.querySelector('.menu-btn i');
+let menuIcon = document.querySelector('#menu-icon');
+let ul = document.querySelector('.nav-list');
 
-function menuShow() {
-    if (ul.classList.contains('open')) {
-        ul.classList.remove('open');
-    } else {
-        ul.classList.add('open');
+menuIcon.addEventListener('click', () => {
+    if (ul.classList.contains('ativo')) {
+        ul.classList.remove('ativo');
+        document.querySelector('#menu-icon img').src = 'img/burger-bar.png'
+    }else {
+        ul.classList.add('ativo');
+        document.querySelector('#menu-icon img').src = 'img/close.png';
     }
-}
+})

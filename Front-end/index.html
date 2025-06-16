@@ -7,31 +7,34 @@
     <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
     <title>MeuRitmo</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--Inicio do cabeçalho-->
+    <!-- Inicio do header -->
     <header>
+        <!-- Menu -->
         <nav id="navbar">
+            <!-- Logotipo -->
             <img class="logo" src="img/MeuRitmo-logo-Photoroom.png" alt="">
 
-            <div class="menu-btn">
-                <i class="fa-solid fa-bars" onclick="menuShow()"></i>
-            </div>
+            <ul class="nav-list">
+                <li class="nav-item active"><a href="#">Inicio</a></li>
+                <li class="nav-item"><a href="#">meu gráfico</a></li>
+                <li class="nav-item"><a href="#">sobre</a></li>
 
-            <ul>
-                <li><a class="active" href="#">jdefhefhe</a></li>
-                <li><a href="#">Meu gráfico</a></li>
-                <li><a href="#">Sobre</a></li>
-                
-                <a class="botao" href="#">Cadastrar</a>
+                <li><a href="#" class="btn-cadastrar">Login</a></li>
             </ul>
 
+            
+
+            <div id="menu-icon">
+                <img src="img/burger-bar.png" alt="">
+            </div>
         </nav>
     </header>
-    <!--Fim do cabeçalho-->
+    <!-- Fim do header -->
 
 
 
@@ -51,6 +54,39 @@
                     hábitos, melhore seu bem-estar e alcance seus objetivos de forma inteligente!</p>
 
                 <a class="botao" href="#">Começar agora</a>
+            </div>
+        </section>
+
+        <section id="cards">
+            <h2>Como <span>funciona</span></h2>
+
+            <div class="containerCards">
+                <div class="cards">
+                    <img src="img/lista-de-afazeres.png" alt="">
+
+                    <h3>Registre a sua rotina</h3>
+
+                    <p>Anote o que importa: sono, alimentação e treinos. Tudo de forma rápida e fácil em poucos cliques!</p>
+                </div>
+
+                <div class="cards">
+                    <img src="img/alvo.png" alt="">
+
+                    <h3>Acompanhe seus gráficos</h3>
+
+                    <p>Visualize a sua evolução diária com gráficos simples e bonitos. Veja o que está funcionando e o que precisa melhorar!</p>
+
+                </div>
+
+                <div class="cards">
+                    
+                    <img src="img/grafico-de-barras-crescente.png" alt="">
+
+                    <h3>Alcançe suas metas</h3>
+
+                    <p>Com os dados certos, fica mais fácil criar hábitos saudáveis e manter o foco na sua rotina ideal!</p>
+
+                </div>
             </div>
         </section>
     </main>
