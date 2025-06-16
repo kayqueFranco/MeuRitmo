@@ -1,6 +1,7 @@
 import  express  from "express"
 import cors from"cors"
 import UsuarioService from "./services/UsuarioService";
+import SonoService from "./services/SonoService";
 
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(cors())
 
 
 const usu = new UsuarioService()
+const son = new SonoService()
 
 
 
@@ -27,9 +29,14 @@ app.get("/api/v1/usuario/listar", (req,res)=>{
 })
 
 
-// ###############################################
+// ##################### SONO ##########################
+app.get("/api/v1/sono/listar", (req,res)=>{
+    son.listarSono(req,res)
+})
 
-
+app.post("/api/v1/sono/cadastro", (req,res)=>{
+    son.cadastroSono(req,res)
+})
 
 
 
