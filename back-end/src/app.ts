@@ -3,6 +3,9 @@ import cors from"cors"
 import UsuarioService from "./services/UsuarioService";
 import SonoService from "./services/SonoService";
 import MetaService from "./services/MetaService";
+import AlimentacaoService from "./services/AlimentacaoService";
+import InfoPessoaisService from "./services/InfoPessoaisService";
+import ExercicioService from "./services/ExercicioService";
 
 
 const app = express();
@@ -15,8 +18,9 @@ app.use(cors())
 const usu = new UsuarioService()
 const son = new SonoService()
 const met = new MetaService()
-
-
+const ali = new AlimentacaoService()
+const inf = new InfoPessoaisService()
+const exe = new ExercicioService();
 
 
 
@@ -49,6 +53,32 @@ app.post("/api/v1/meta/cadastro", (req,res)=>{
     met.cadastroMeta(req,res)
 })
 
+// #################### ALIMENTAÇãO ##########################
+app.get("/api/v1/alimentacao/listar", (req,res)=>{
+    ali.listarAlimentacao(req,res)
+})
+
+app.post("/api/v1/alimentacao/cadastro", (req,res)=>{
+    ali.cadastroAlimentacao(req,res)
+})
+
+// ################## Informações Pessoais ###################
+app.get("/api/v1/cadinfo/listar", (req,res)=>{
+    inf.listarInfoPessoais(req,res)
+})
+
+app.post("/api/v1/cadinfo/cadastro", (req,res)=>{
+    inf.cadastraInfoPessoais(req,res)
+})
+
+// ################## EXERCICIO ################################
+app.get("/api/v1/exercicio/listar", (req,res)=>{
+    exe.listarExercicio(req,res)
+})
+
+app.post("/api/v1/exercicio/cadastra", (req,res)=>{
+    exe.cadastroExercicio(req,res)
+})
 
 
 

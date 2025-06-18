@@ -31,7 +31,6 @@ export default class SonoRepository implements Commands<Sono>{
     }
 
     Listar(): Promise<Sono[]> {
-      
         return new Promise((resolve,rejects)=>{
             conexao.query("Select * from sono",(erro, result)=>{
                 if(erro){
