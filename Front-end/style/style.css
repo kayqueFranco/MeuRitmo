@@ -46,7 +46,7 @@ header {
 }
 
 #menu-icon img {
-    width: 30px;
+    width: 22px;
     margin-right: 20px;
 }
 
@@ -88,163 +88,12 @@ header {
 
 /* Fim do cabeçalho */
 
-/* Banner */
-
-#ladoDir img {
-    display: none;
-}
-
-#ladoEsq {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    z-index: 1;
-    margin: 0 auto;
-    max-width: 300px;
-}
-
-#shape {
-    display: none;
-}
-
-/* ---------- Fim do cabeçalho ---------- */
-
-#ladoEsq span {
-    color: #3e2b8b;
-}
-
-#ladoEsq h1 {
-    font-size: 2.5em;
-}
-
-#ladoEsq p {
-    max-width: 380px;
-    margin-bottom: 30px;
-}
-
-.botao {
-    padding: 10px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 600;
-    border-radius: 10px;
-    background-color: #3e2b8b;
-}
-
-.btn-default {
-    margin-right: 20px;
-    background-color: #2cb17b;
-}
-
-/* ---------- Inicio da area de cards ---------- */
-#cards {
-    margin-top: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#cards h2 {
-    margin-bottom: 30px;
-    margin-top: 30px;
-}
-
-.cards {
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 3px 1px 8px 0px black;
-    margin: 30px 0px;
-    max-width: 300px;
-    height: 380px;
-    text-align: center;
-    padding: 20px;
-}
-
-.cards img {
-    width: 80px;
-    margin-top: 20px;
-}
-
-.cards h3 {
-    margin: 25px 0px;
-    max-width: 250px;
-}
-
-#cards span {
-   color: #3e2b8b;
-}
-
-.cards p {
-    margin: 25px 0px 35px 0px;
-}
-
-/* ---------- FIM da area de cards ---------- */
-
 /* Celular Horizontal */
-@media (min-width: 576px) {
-    #ladoEsq {
-        max-width: 450px;
-    }
-}
+@media (min-width: 576px) {}
 
 
 /* Tablet Portrait */
-@media (min-width: 768px) {
-
-    /* Banner */
-    #ladoEsq {
-        max-width: 500px;
-        margin-top: 30px;
-    }
-
-    #shape {
-        display: flex; 
-        position: absolute;
-        left: -150px;
-        top: -150px;
-        width: 800px;
-        height: 800px;
-        border-radius: 50%;
-        background-color: #2cb17c2d;
-    }
-
-    /* ---------- Inicio da area de cards ---------- */
-    .containerCards {
-        display: flex;
-        flex-direction: row;
-    }
-
-    #cards-dicas h2 {
-        margin-bottom: 35px;
-        letter-spacing: 2px;
-    }
-
-    .cards {
-        margin: 0px 10px;
-        max-width: 300px;
-        height: 300px;
-        padding: 15px;
-    }
-
-    .cards img {
-        width: 70px;
-    }
-
-    .cards h3 {
-        margin: 25px 0px;
-        max-width: 250px;
-    }
-
-    .cards p {
-        font-size: 13px;
-        max-width: 2580px;
-        margin: 25px 0px 40px 0px;
-    }
-
-    /* ---------- FIM da area de cards ---------- */
-}
+@media (min-width: 768px) {}
 
 
 /* Tablet Landscape */
@@ -255,45 +104,6 @@ header {
         width: 240px;
         height: 240px;
     }
-
-    /* Banner */
-    #shape {
-        left: -60px;
-        top: -320px;
-        width: 900px;
-        height: 900px;
-    }
-
-    /* ---------- Inicio da area de cards ---------- */
-    #cards-dicas h2 {
-        margin-bottom: 45px;
-    }
-
-    .cards {
-        margin: 0px 20px;
-        max-width: 280px;
-        height: 350px;
-        padding: 20px;
-        z-index: 2;
-    }
-
-    .cards img {
-        width: 100px;
-        margin-top: 10px;
-    }
-
-    .cards h3 {
-        margin: 25px 0px;
-        padding-top: 30px;
-        max-width: 360px;
-    }
-
-    .cards p {
-        max-width: 280px;
-        margin: 25px 0px 40px 0px;
-    }
-
-    /* ---------- FIM da area de cards ---------- */
 
 }
 
@@ -340,35 +150,4 @@ header {
     }
 
     /* Fim - Cabeçalho */
-
-    #ladoDir img {
-        top: -5px;
-        display: block;
-        position: absolute;
-        right: 0px;
-        top: 70px;
-    }
-
-    #ladoEsq {
-        position: absolute;
-        left: 90px;
-        top: 230px;
-    }
-
-    #shape {
-        left: -300px;
-        top: 20px;
-        width: 1200px;
-        height: 1200px;
-    }
-
-    /*Fim do cabeçalho*/
-
-    .card img {
-        width: 60px;
-        margin-top: 10px;
-    }
-
-    
-    
 }

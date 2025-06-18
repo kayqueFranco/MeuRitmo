@@ -1,0 +1,354 @@
+@charset "UTF-8";
+
+/* Banner */
+
+#ladoDir img {
+    display: none;
+}
+
+#ladoEsq {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 300px;
+}
+
+#ladoEsq h1,
+p,
+a {
+    text-align: center;
+}
+
+#shape {
+    display: none;
+}
+
+/* ---------- Fim do cabeçalho ---------- */
+
+#ladoEsq span {
+    color: #3e2b8b;
+}
+
+#ladoEsq h1 {
+    font-size: 2.5em;
+}
+
+#ladoEsq p {
+    max-width: 380px;
+    margin-bottom: 30px;
+}
+
+.botao {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #3e2b8b;
+}
+
+.btn-default {
+    margin-right: 20px;
+    background-color: #2cb17b;
+}
+
+/* ---------- Inicio da area de cards ---------- */
+#cards {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cards h2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+#cards .span-cards {
+    color: #00a161;
+}
+
+.cards {
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+    margin: 30px 0px;
+    max-width: 300px;
+    height: 380px;
+    text-align: center;
+    padding: 20px;
+}
+
+.cards img {
+    width: 80px;
+    margin-top: 20px;
+    object-fit: cover;
+}
+
+.cards h3 {
+    margin: 25px 0px;
+    max-width: 250px;
+}
+
+#cards span {
+    color: #3e2b8b;
+}
+
+.cards p {
+    margin: 25px 0px 35px 0px;
+}
+
+/* ---------- FIM da area de cards ---------- */
+
+/* ---------- Inicio da area de saude ---------- */
+
+#info-saude {
+    margin-top: 120px;
+}
+
+.containerSaude {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerSaude .caixa-saude img {
+    width: 300px;
+}
+
+.caixa-texto-saude {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.caixa-texto-saude h3 {
+    margin: 20px 0px;
+}
+
+.caixa-texto-saude p {
+    margin: 20px 0px;
+    max-width: 340px;
+}
+
+.caixa-texto-saude .span-saude {
+    color: #3e2b8b;
+}
+
+/* ---------- FIM da area de saude ---------- */
+
+@media (min-width: 576px) {
+    #ladoEsq {
+        max-width: 450px;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) {
+
+    /* Banner */
+    #ladoEsq {
+        max-width: 500px;
+        margin-top: 30px;
+    }
+
+    /* ---------- Inicio da area de cards ---------- */
+    .containerCards {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #cards-dicas h2 {
+        margin-bottom: 35px;
+        letter-spacing: 2px;
+    }
+
+    .cards {
+        margin: 0px 10px;
+        max-width: 300px;
+        height: 320px;
+        padding: 15px;
+    }
+
+    .cards img {
+        width: 70px;
+    }
+
+    .cards h3 {
+        margin: 15px 0px;
+        max-width: 250px;
+    }
+
+    .cards p {
+        font-size: 13px;
+        max-width: 2580px;
+        margin: 25px 0px 40px 0px;
+    }
+
+    /* ---------- FIM da area de cards ---------- */
+}
+
+@media (min-width: 992px) {
+
+    /* ---------- Inicio da area de cards ---------- */
+    #cards-dicas h2 {
+        margin-bottom: 45px;
+    }
+
+    .cards {
+        margin: 0px 20px;
+        max-width: 280px;
+        height: 360px;
+        padding: 20px;
+        z-index: 2;
+    }
+
+    .cards img {
+        width: 100px;
+        margin-top: 10px;
+    }
+
+    .cards h3 {
+        margin: 5px 0px;
+        padding-top: 30px;
+        max-width: 360px;
+    }
+
+    .cards p {
+        max-width: 280px;
+        margin: 25px 0px 40px 0px;
+    }
+
+    /* ---------- FIM da area de cards ---------- */
+
+    /* ---------- Inicio da area de saude ---------- */
+
+    .containerSaude {
+        flex-direction: row;
+    }
+
+    .containerSaude .caixa-saude img {
+        width: 360px;
+    }
+
+    .caixa-texto-saude {
+        margin-left: 100px;
+    }
+
+    .caixa-texto-saude h3 {
+        margin: 20px 0px;
+    }
+
+    .caixa-texto-saude p {
+        margin: 20px 0px;
+        max-width: 340px;
+    }
+
+    /* ---------- FIM da area de saude ---------- */
+
+}
+
+/* PCS e Notebooks */
+@media (min-width: 1200px) {
+
+    #banner-principal {
+        height: calc(100vh - 110px);
+    }
+
+    #ladoDir img {
+        top: -5px;
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 70px;
+    }
+
+    #ladoEsq {
+        position: absolute;
+        left: 90px;
+        top: 230px;
+    }
+
+    #shape {
+        display: flex;
+        position: absolute;
+        left: -300px;
+        top: -220px;
+        width: 1000px;
+        height: 1000px;
+        border-radius: 50%;
+        background-color: #2cb17c2d;
+    }
+
+    /* ---------- Inicio da area de cards ---------- */
+    #cards {
+        margin-top: 100px;
+    }
+
+    #cards h2 {
+        font-size: 30px;
+        margin-bottom: 60px;
+        margin-top: 0px;
+    }
+
+    .cards {
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+        margin: 30px 0px;
+        max-width: 300px;
+        height: 330px;
+        text-align: center;
+        padding: 20px;
+        margin: 0px 40px;
+    }
+
+    .cards img {
+        width: 70px;
+        margin-top: 20px;
+        object-fit: cover;
+    }
+
+    .cards h3 {
+        margin: 0px 0px;
+        max-width: 250px;
+    }
+
+    #cards span {
+        color: #3e2b8b;
+    }
+
+    .cards p {
+        margin: 25px 0px 35px 0px;
+    }
+
+    /* ---------- FIM da area de cards ---------- */
+
+    /* ---------- Inicio da area de saude ---------- */
+
+    .containerSaude .caixa-saude img {
+        width: 380px;
+    }
+
+    .caixa-texto-saude {
+        margin-left: 110px;
+    }
+
+    .caixa-texto-saude h3 {
+        font-size: 26px;
+        margin: 20px 0px;
+    }
+
+    .caixa-texto-saude p {
+        font-size: 17px;
+        margin: 20px 0px;
+        max-width: 440px;
+    }
+
+    /* ---------- FIM da area de saude ---------- */
+}
