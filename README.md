@@ -31,7 +31,6 @@ O sistema foi desenvolvido como parte do Projeto Integrador do curso Técnico em
 - **Node.js**
 - **Express.js**
 - **MySQL**
-- **Electron (para versão desktop - opcional)**
 - **Bootstrap**
 
 ---
@@ -44,17 +43,9 @@ O sistema foi desenvolvido como parte do Projeto Integrador do curso Técnico em
 npm install
 ```
 
-### 2. Configure o arquivo `.env` com os seguintes dados:
 
-```env
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=sua_senha
-DB_NAME=dbmeuritmo
-JWT_SECRET=sua_chave_secreta
-```
 
-### 3. Inicie o servidor:
+### 2. Inicie o servidor:
 
 ```bash
 npm start
