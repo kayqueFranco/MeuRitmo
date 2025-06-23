@@ -6,6 +6,7 @@ import MetaService from "./services/MetaService";
 import AlimentacaoService from "./services/AlimentacaoService";
 import InfoPessoaisService from "./services/InfoPessoaisService";
 import ExercicioService from "./services/ExercicioService";
+import Hidratacaoservice from "./services/HidratacaoService";
 
 
 const app = express();
@@ -21,6 +22,7 @@ const met = new MetaService()
 const ali = new AlimentacaoService()
 const inf = new InfoPessoaisService()
 const exe = new ExercicioService();
+const hidra = new Hidratacaoservice()
 
 
 
@@ -81,6 +83,16 @@ app.post("/api/v1/exercicio/cadastra", (req,res)=>{
 })
 
 
+
+
+
+// #############################################################
+app.post("/api/v1/hidratacao/cadastrar", (req,res)=>{
+    hidra.cadastrarhidratacao(req,res)
+})
+app.get("/api/v1/hidratacao/listar", (req,res)=>{
+    hidra.listarHidratacao(req,res)
+})
 
 
 
