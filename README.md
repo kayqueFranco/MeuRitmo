@@ -53,8 +53,15 @@ npm start
 
 ---
 
-## 🗄️ Estrutura de Banco de Dados (Meu Ritmo)
 
+
+## 🗄️ Estrutura de Banco de Dados (Meu Ritmo)
+### Foto  da Diagrama do Banco
+
+
+<img src="back-end/img/diagrama.png">
+
+---
 ### Tabela: `usuario`
 
 ```sql
