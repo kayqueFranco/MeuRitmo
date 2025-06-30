@@ -16,14 +16,14 @@
 
 <body>
     <!-- Inicio do header -->
-    <header>
+    <header id="header">
         <!-- Menu -->
         <nav id="navbar">
             <!-- Logotipo -->
             <img class="logo" src="img/MeuRitmo-logo-Photoroom.png" alt="">
 
             <ul class="nav-list">
-                <li class="nav-item active"><a href="#">Inicio</a></li>
+                <li class="nav-item active"><a href="index.html">Inicio</a></li>
                 <li class="nav-item"><a href="#">meu gráfico</a></li>
                 <li class="nav-item"><a href="#">sobre</a></li>
 
@@ -51,23 +51,23 @@
             </div>
 
             <div id="ladoEsq">
-                <h1>Como vai sua <span>saúde?</span></h1>
+                <h1>Como vai sua <span class="span-roxo">saúde?</span></h1>
 
                 <p>Transforme sua rotina com recomendações de saúde feitas especialmente para voçê. Entenda seus
                     hábitos, melhore seu bem-estar e alcance seus objetivos de forma inteligente!</p>
 
-                <a class="botao" href="#">Começar agora</a>
+                <a class="botao" href="teste.html">Teste agora</a>
             </div>
         </section>
 
         <section id="cards">
-            <h2>Como <span>funciona</span></h2>
+            <h2>Como <span class="span-roxo">funciona</span></h2>
 
             <div class="containerCards">
                 <div class="cards">
                     <img src="img/lista-de-afazeres.png" alt="">
 
-                    <h3>Registre a sua <span class="span-cards">rotina</span></h3>
+                    <h3>Registre a sua <span class="span-verde">rotina</span></h3>
 
                     <p>Anote o que importa: sono, alimentação e treinos. Tudo de forma rápida e fácil em poucos cliques!
                     </p>
@@ -76,7 +76,7 @@
                 <div class="cards">
                     <img src="img/alvo.png" alt="">
 
-                    <h3><span class="span-cards">Acompanhe</span> seus gráficos</h3>
+                    <h3><span class="span-verde">Acompanhe</span> seus gráficos</h3>
 
                     <p>Visualize a sua evolução diária com gráficos simples. Veja o que está funcionando e o que precisa
                         melhorar!</p>
@@ -87,7 +87,7 @@
 
                     <img src="img/grafico-de-barras-crescente.png" alt="">
 
-                    <h3>Alcançe suas <span class="span-cards">metas</span></h3>
+                    <h3>Alcançe suas <span class="span-verde">metas</span></h3>
 
                     <p>Com os dados certos, fica mais fácil criar hábitos saudáveis e manter o foco na sua rotina ideal!
                     </p>
@@ -103,31 +103,68 @@
                 </div>
                 
                 <div class="caixa-texto-saude">
-                    <h3>A <span class="span-saude">saúde</span> começa a rotina</h3>
+                    <h3>A <span class="span-roxo">saúde</span> começa a rotina</h3>
                     
                     <p>Pequenas escolhas diáraias fazem uma grande diferença. Dorimir bem, se alimentar melhor e se movimentar são hábitos que transformam seu corpo e sua mente. Com o nosso sistema, você acompanha tudo isso com facilidade</p>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section id="info-grafico">
             <div class="containerGrafico">
                 
                 <div class="caixa-texto-grafico">
-                    <h3>Entenda sua rotina com dados visuais</h3>
+                    <h3>Entenda sua <span class="span-verde">rotina</span> com dados visuais</h3>
                     
-                    <p> Às vezes, a gente sente que algo está fora do lugar, mas não consegue enxergar o que exatamente. È aí que os gráficos entram: eles mostram de forma clara, como estão seus hábitos. Com visualização simples e intuitivas, fica fácil identificar padrões, perceber sua evolução e fazer ajustes no que for preciso. Você não precisa adivinhar: seus dados falam por você!
+                    <p> Às vezes, a gente sente que algo está fora do lugar, mas não consegue enxergar o que. É aí que os gráficos entram: eles mostram de forma clara, como estão seus hábitos. Com visualização simples e intuitivas, fica fácil identificar padrões, perceber sua evolução e fazer ajustes no que for preciso. Você não precisa adivinhar: seus dados falam por você!
                     </p>
-                    
-                    <div class="caixa-grafico">
-                        <img src="img/undraw_visual-data_3ghp.svg" alt="">
-                    </div>
+                </div>
+
+                <div class="caixa-grafico-img">
+                    <img src="img/undraw_visual-data_3ghp.svg" alt="">
                 </div>
             </div>
         </section>
 
     </main>
     <!--Fim do main-->
+
+
+
+
+    <!-- Inicio do footer -->
+    <footer>
+        <img src="/Front-end/img/wave.svg" alt="imagem do footer">
+
+        <div id="footer-itens">
+
+            <span id="copyright">
+                &copy 2025 Meu Ritmo
+            </span>
+
+            <div class="redes-sociais">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div class="seta-inicio">
+                <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim do footer -->
+
+
+
 
     <script src="js/script.js"></script>
 </body>

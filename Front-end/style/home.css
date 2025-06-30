@@ -28,10 +28,6 @@ a {
 
 /* ---------- Fim do cabeçalho ---------- */
 
-#ladoEsq span {
-    color: #3e2b8b;
-}
-
 #ladoEsq h1 {
     font-size: 2.5em;
 }
@@ -69,10 +65,6 @@ a {
     margin-top: 30px;
 }
 
-#cards .span-cards {
-    color: #00a161;
-}
-
 .cards {
     border-radius: 10px;
     background-color: #fff;
@@ -93,10 +85,6 @@ a {
 .cards h3 {
     margin: 25px 0px;
     max-width: 250px;
-}
-
-#cards span {
-    color: #3e2b8b;
 }
 
 .cards p {
@@ -136,16 +124,59 @@ a {
     max-width: 340px;
 }
 
-.caixa-texto-saude .span-saude {
-    color: #3e2b8b;
+/* ---------- FIM da area de saude ---------- */
+
+/* ---------- Inicio da area de gráfico ---------- */
+#info-grafico {
+    margin-top: 80px;
 }
 
-/* ---------- FIM da area de saude ---------- */
+.containerGrafico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa-texto-grafico {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.containerGrafico .caixa-texto-grafico h3 {
+    max-width: 280px;
+    margin: 20px auto;
+}
+
+.containerGrafico .caixa-texto-grafico p {
+    margin: 20px auto;
+    max-width: 340px;
+}
+
+.containerGrafico .caixa-grafico-img img {
+    width: 300px;
+}
+
+/* ---------- FIM da area de gráfico ---------- */
 
 @media (min-width: 576px) {
     #ladoEsq {
         max-width: 450px;
     }
+
+    /* ---------- Inicio da area de saude ---------- */
+    .caixa-texto-saude p {
+        max-width: 400px;
+    }
+
+    /* ---------- FIM da area de saude ---------- */
+
+    /* ---------- Inicio da area de grafico ---------- */
+    .containerGrafico .caixa-texto-grafico p {
+        max-width: 440px;
+    }
+
+    /* ---------- FIM da area de grafico ---------- */
 }
 
 /* Tablet Portrait */
@@ -251,6 +282,28 @@ a {
 
     /* ---------- FIM da area de saude ---------- */
 
+    /* ---------- Inicio da area de gráfico ---------- */
+    #info-grafico {
+        margin-top: 120px;
+    }
+
+    .containerGrafico {
+        flex-direction: row;
+    }
+
+    .caixa-texto-grafico {
+        margin-right: 100px;
+    }
+
+    .containerGrafico .caixa-texto-grafico p {
+        max-width: 420px;
+    }
+
+    .containerGrafico .caixa-grafico-img img {
+        width: 360px;
+    }
+
+    /* ---------- FIM da area de gráfico ---------- */
 }
 
 /* PCS e Notebooks */
@@ -319,10 +372,6 @@ a {
         max-width: 250px;
     }
 
-    #cards span {
-        color: #3e2b8b;
-    }
-
     .cards p {
         margin: 25px 0px 35px 0px;
     }
@@ -330,6 +379,9 @@ a {
     /* ---------- FIM da area de cards ---------- */
 
     /* ---------- Inicio da area de saude ---------- */
+    #info-saude {
+        margin-top: 180px;
+    }
 
     .containerSaude .caixa-saude img {
         width: 380px;
@@ -351,4 +403,31 @@ a {
     }
 
     /* ---------- FIM da area de saude ---------- */
+
+    /* ---------- Inicio da area de gráfico ---------- */
+    .containerGrafico {
+        flex-direction: row;
+    }
+
+    .caixa-texto-grafico {
+        margin-right: 110px;
+    }
+
+    .containerGrafico .caixa-texto-grafico h3 {
+        font-size: 26px;
+        max-width: 480px;
+        margin: 20px auto;
+    }
+
+    .containerGrafico .caixa-texto-grafico p {
+        font-size: 17px;
+        margin: 20px 0px;
+        max-width: 460px;
+    }
+
+    .containerGrafico .caixa-grafico-img img {
+        width: 380px;
+    }
+
+    /* ---------- FIM da area de gráfico ---------- */
 }

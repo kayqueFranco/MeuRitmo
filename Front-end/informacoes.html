@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
+    <title>MeuRitmo</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/informacoes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Inicio do header -->
+    <header id="header">
+        <!-- Menu -->
+        <nav id="navbar">
+            <!-- Logotipo -->
+            <img class="logo" src="img/MeuRitmo-logo-Photoroom.png" alt="">
+
+            <ul class="nav-list">
+                <li class="nav-item active"><a href="index.html">Inicio</a></li>
+                <li class="nav-item"><a href="#">meu gráfico</a></li>
+                <li class="nav-item"><a href="#">sobre</a></li>
+
+                <li><a href="#" class="btn-cadastrar">Login</a></li>
+            </ul>
+
+
+
+            <div id="menu-icon">
+                <img src="img/burger-bar.png" alt="">
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do header -->
+
+    <main id="container">
+        <h1>Calculadora de métricas de <span class="span-verde">saúde</span></h1>
+
+        <div class="formulario">
+            <!-- Inicio entrada de dados -->
+            <form name="frmHealth">
+                <div class="Radio">
+                    <h3>Você é homem ou mulher?</h3>
+                    <input type="radio" name="grupo" id="m"> Masculino
+                    <input type="radio" name="grupo" id="f"> Feminino
+                </div>
+                <input type="number" name="txtIdade" placeholder="Idade">
+                <input type="number" name="txtPeso" placeholder="Peso (Kg)">
+                <input type="number" name="txtAltura" placeholder="Altura (cm)">
+                <h3>Qual é o seu <span class="span-verde">objetivo?</span></h3>
+                <select name="nivel" id="atividade">
+                    <option value="" selected>Selecione aqui:</option>
+                    <option value="">Perder peso</option>
+                    <option value="">Ganhar massa muscular</option>
+                    <option value="">Se manter em seu peso</option>
+                    <option value="">Melhorar seu condicionamento fisíco</option>
+                    <option value="">Aumentar energia e disposoção diária</option>
+                </select>
+                <div id="button">
+                    <input type="button" value="Responder perguntas">
+                </div>
+            </form>
+            <!-- Fim entrada de dados -->
+        </div>
+        
+    </main>
+
+
+
+    <!-- Inicio do footer -->
+    <footer>
+        <img src="/Front-end/img/wave.svg" alt="imagem do footer">
+
+        <div id="footer-itens">
+
+            <span id="copyright">
+                &copy 2025 Meu Ritmo
+            </span>
+
+            <div class="redes-sociais">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+
+            <div class="seta-inicio">
+                <a href="#header"><i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Fim do footer -->
+
+
+
+    <script src="js/teste.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
