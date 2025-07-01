@@ -1,21 +1,43 @@
 import { resolve } from "path";
 import Usuario from "../classes/Usuario";
-import Commands from "../interfaces/commands";
+import bcrypt from "bcrypt"
 import { rejects } from "assert";
 import { conexao } from "../database/Config";
 import { error } from "console";
+import CommandsUsuaro from "../interfaces/CommandsUsuario";
 
-export default class UsuarioRepository implements Commands<Usuario>{
+export default class UsuarioRepository implements CommandsUsuaro<Usuario>{
+    login(usuario: string, senha: string):Promise<any> {
+        return new Promise((resolve, reject)=>{
+            conexao.query(`SELECT * from usuario WHERE  nomeusuario=?`,
+                [
+                    usuario
+                ],
+                (erro,result:any)=>{
+                    if(erro){
+                        return reject(erro)
+                    }
+                    else{
+                        return resolve(result)
+                    }
+                }
+            )
+        })
+    }
+    loginUCE(usuario: string, emiail: string, senha: string) {
+        throw new Error("Method not implemented.");
+    }
     Cadastrar(obj: Usuario): Promise<Usuario> {
       return new Promise((resolve,rejects)=>{
     
-        conexao.query("INSERT INTO usuario(nome,email,data_nascimento,telefone,senha) values(?,?,?,?,?)",
+        conexao.query("INSERT INTO usuario(nome,email,data_nascimento,telefone,senha,nomeusuario) values(?,?,?,?,?,?)",
             [
                 obj.nome,
                 obj.email,
                 obj.data_nascimento,
                 obj.telefone,
-                obj.senha],
+                obj.senha,
+                obj.nomeusuario],
                 (error,result)=>{
                     if(error){
                         return rejects(error)

@@ -5,4 +5,5 @@ email!:string;
 telefone?:string;
 data_nascimento?:Date;
 senha!:string;
+nomeusuario!:string
 }

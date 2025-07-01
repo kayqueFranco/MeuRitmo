@@ -34,6 +34,9 @@ app.post("/api/v1/usuario/cadastro",(req,res)=>{
 app.get("/api/v1/usuario/listar", (req,res)=>{
     usu.listarUsuarios(req,res)
 })
+app.post("/api/v1/usuario/login",(req,res)=>{
+    usu.loginUsuario(req,res);
+})
 
 
 // ##################### SONO ##########################
