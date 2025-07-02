@@ -1,5 +1,6 @@
 let menuIcon = document.querySelector('#menu-icon');
 let ul = document.querySelector('.nav-list');
+let ip = "http://10.26.45.42:5000/api/v1";
 
 menuIcon.addEventListener('click', () => {
     if (ul.classList.contains('ativo')) {

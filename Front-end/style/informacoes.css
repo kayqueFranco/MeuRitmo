@@ -16,14 +16,12 @@
     flex-direction: column;
 }
 
-.formulario form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.formulario form .Radio {
+    margin: 20px 0px 20px 0px;
 }
 
-.formulario form input[type="number"]{
+.formulario form input[type="number"],
+input[type="text"] {
     margin: 10px 0px;
     border: 1px solid #00a161;
     border-radius: 5px;
@@ -32,40 +30,90 @@
     outline: none;
 }
 
-.formulario form input[type="radio"]{
+.formulario form input[type="radio"] {
     margin: 30px 5px;
     cursor: pointer;
 }
 
-.formulario form input[type='radio']:last-child{
+.formulario form label {
+    font-weight: 600;
+    margin: 20px 140px 0px 0px;
+}
+
+.formulario form input[type='radio']:last-child {
     color: #000;
     margin-left: 25px;
 }
 
-.formulario form select{
+.formulario form select {
     padding: 10px;
-    width: 280px;
     border: 1px solid #000;
     outline: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-.formulario h3 {
-    margin: 80px 0px 20px 0px;
-}
-
 #atividade {
-    /* margin: 20px 0px; */
+    width: 240px;
+    margin-bottom: 50px;
 }
 
-#button input {
+.formulario h3 {
+    margin: 20px 0px 10px 0px;
+}
+
+.formulario form .h3Select {
+    margin: 60px 0px 10px 0px;
+}
+
+#button a {
     color: #fff;
     background-color: #3e2b8b;
-    margin-top: 60px;
     padding: 10px;
     width: 180px;
     border: #fff;
     border-radius: 10px;
     cursor: pointer;
+}
+
+/* ---------- FIM da area de gráfico ---------- */
+
+@media (min-width: 576px) {}
+
+/* Tablet Portrait */
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+/* PCS e Notebooks */
+@media (min-width: 1200px) {
+
+    .formulario form input[type="number"],
+    input[type="text"], #atividade {
+        width: 420px;
+    }
+
+    .formulario form label {
+        font-weight: 600;
+        margin: 20px 280px 0px 0px;
+    }
+
+    #container {
+        margin: 120px auto;
+        width: 800px;
+        padding: 50px;
+        box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+        border-radius: 15px;
+    }
+
+    #button a {
+        font-weight: 800;
+        padding: 15px;
+        transition: 0.5s;
+    }
+
+    #button a:hover {
+        font-size: 1.1em;
+    }
+
 }
