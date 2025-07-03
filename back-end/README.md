@@ -129,6 +129,6 @@ npm run dev
 
 ## 👨‍💻 Desenvolvido por
 
-* Kayque Franco dos Santos de Sá
-* Murillo Mendonça
-* Arthur Cruz
+* [ Kayque Franco](https://github.com/kayqueFranco)
+* [Murillo Mendonça](https://github.com/mmendoncamascarenha)
+* [Arthur Cruz](https://github.com/arthurcruzalves)
