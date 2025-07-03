@@ -89,5 +89,5 @@ Novas melhorias visuais e funcionais estão sendo implementadas.
 
 ## 👨‍💻 Desenvolvido por
 
-* Davi Do Couto
-* Luiz Damas
+* [Davi Do Couto](https://github.com/Davicouto530)
+* [Luiz Damas](https://github.com/LuizDamasAmorim)
