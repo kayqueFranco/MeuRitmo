@@ -141,11 +141,11 @@ CREATE TABLE exercicio (
 
 ## 👨‍💼 Equipe Desenvolvedora
 
-- Kayque Franco dos Santos de Sá
-- Luiz Damas Amorim
-- Davi Do Couto
-- Arthur Cruz 
-- Murillo Mendonça
+- [Kayque franco](https://github.com/kayqueFranco)
+- [Luiz Damas Amorim](https://github.com/LuizDamasAmorim)
+- [Davi Do Couto](https://github.com/Davicouto530)
+- [Arthur Cruz ](https://github.com/arthurcruzalves)
+- [Murillo Mendonça](https://github.com/mmendoncamascarenha)
 
 ---
 
