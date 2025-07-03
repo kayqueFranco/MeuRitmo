@@ -8,10 +8,9 @@ Este documento descreve as principais funcionalidades e estrutura da API RESTful
 
 * Node.js
 * TypeScript
-* Express.js
 * MySQL
 * JWT (Autenticação)
-* dotenv
+
 * bcryptjs
 
 ---

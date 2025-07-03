@@ -31,7 +31,7 @@ O sistema foi desenvolvido como parte do Projeto Integrador do curso Técnico em
 - **Node.js**
 - **Express.js**
 - **MySQL**
-- **Bootstrap**
+
 
 ---
 

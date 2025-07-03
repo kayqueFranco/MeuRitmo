@@ -10,8 +10,7 @@ Esta documentação descreve as principais funcionalidades e estrutura da interf
 * CSS3
 * JavaScript
 * TypeScript
-* Bootstrap
-* SweetAlert2 (para notificações)
+
 
 ---
 
