@@ -2,7 +2,7 @@ import Usuario from "./Usuario";
 
 export default class Meta {
     id!:number;
-    usuario!:string;
+    usuario!:Usuario;
     meta_tipo!:string;
     unidades!:number;
     data_inicio!:number;

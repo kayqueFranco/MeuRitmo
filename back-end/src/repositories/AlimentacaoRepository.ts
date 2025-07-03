@@ -8,12 +8,12 @@ import { error } from "console";
 export default class AlimentacaoRepository implements Commands<Alimentacao> {
     Cadastrar(obj: Alimentacao): Promise<Alimentacao> {
         return new Promise((resolve, rejects) => {
-            conexao.query("INSERT INTO alimentacao(id_usuario,refeicao,descricao,caloria_aproximada,hora,datadia) values (?,?,?,?,?,?)",
+            conexao.query("INSERT INTO alimentacao(id_usuario,refeicao,oque_comeu,quantidade_comeu,hora,datadia) values (?,?,?,?,?,?)",
                 [
                     obj.usuario,
                     obj.refeicao,
-                    obj.descricao,
-                    obj.caloria_aproximada,
+                    obj.oque_comeu,
+                    obj.quantidade_comeu,
                     obj.hora,
                     obj.datadia
                 ],

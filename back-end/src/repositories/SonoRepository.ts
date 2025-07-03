@@ -10,7 +10,7 @@ export default class SonoRepository implements Commands<Sono>{
         
         conexao.query("INSERT INTO sono(id_usuario,hora_durmidas,qualidade_sono,hora_dormiu,hora_acordou,datadia) values (?,?,?,?,?,?)",
             [
-                obj.usuario,//
+                obj.usuario,
                 obj.horas_durmidas,
                 obj.qualidade_sono,
                 obj.hora_dormiu,

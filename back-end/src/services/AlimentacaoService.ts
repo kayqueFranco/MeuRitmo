@@ -10,8 +10,8 @@ export default class AlimentacaoService{
         const ali:Alimentacao = new Alimentacao();
         ali.usuario = req.body.usuario;
         ali.refeicao = req.body.refeicao;
-        ali.descricao = req.body.descricao;
-        ali.caloria_aproximada = req.body.caloria_aproximada;
+        ali.oque_comeu = req.body.oque_comeu;
+        ali.quantidade_comeu = req.body.quantidade_comeu;
         ali.hora = req.body.hora;
         ali.datadia = req.body.datadia;
         try {

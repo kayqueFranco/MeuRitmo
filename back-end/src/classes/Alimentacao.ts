@@ -1,11 +1,11 @@
-import Usuario from "./Usuario";
+import usuario from "./Usuario";
 
 export default class Alimentacao {
     id!:number;
-    usuario!:string;
+    usuario!:usuario;
     refeicao!:string;
-    descricao!:string;
-    caloria_aproximada!:number;
+    oque_comeu!:string;
+    quantidade_comeu!:string;
     hora!:number;
     datadia!:Date;
 }

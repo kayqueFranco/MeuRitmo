@@ -30,11 +30,11 @@ export default class UsuarioRepository implements CommandsUsuaro<Usuario>{
     Cadastrar(obj: Usuario): Promise<Usuario> {
       return new Promise((resolve,rejects)=>{
     
-        conexao.query("INSERT INTO usuario(nome,email,data_nascimento,telefone,senha,nomeusuario) values(?,?,?,?,?,?)",
+        conexao.query("INSERT INTO usuario(nome,email,idade,telefone,senha,nomeusuario) values(?,?,?,?,?,?)",
             [
                 obj.nome,
                 obj.email,
-                obj.data_nascimento,
+                obj.idade,
                 obj.telefone,
                 obj.senha,
                 obj.nomeusuario],

@@ -1,6 +1,8 @@
+import Usuario from "./Usuario";
+
 export default class InfoPessoais{
     id!:number;
-    usuario!:string;
+    usuario!:Usuario;
     sexo!:string;
     peso!:number;
     altura!:number;

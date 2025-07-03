@@ -1,9 +1,9 @@
 export default class Usuario {
 id!:number;
 nome!:string;
-email!:string;
+email?:string;
 telefone?:string;
-data_nascimento?:Date;
+idade!:Number;
 senha!:string;
 nomeusuario!:string
 }

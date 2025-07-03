@@ -21,7 +21,7 @@ async cadastroUsuario(req:Request,res:Response){
     const usu:Usuario = new Usuario()
     usu.nome = req.body.nome;
     usu.email = req.body.email;
-    usu.data_nascimento = req.body.data_nascimento;
+    usu.idade = req.body.idade;
     usu.telefone = req.body.telefone;
     usu.senha =(await this.criptografarSenha(req.body.senha)).toString();
     usu.nomeusuario = req.body.nomeusuario;
