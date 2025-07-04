@@ -7,7 +7,7 @@
     <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
     <title>MeuRitmo</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/alimentacao.css">
+    <link rel="stylesheet" href="style/informacoes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -37,69 +37,45 @@
     </header>
     <!-- Fim do header -->
 
-    <!-- Inicio do main -->
+    <main id="container">
+        <h1>Perguntas                  <span class="span-verde">iniciais</span></h1>
 
-    <main>
-
-        <section id="alimentacao">
-            <h1>Coloque aqui o que você <span class="span-verde" >comeu</span> no seu dia!</h1>
-
-            <div class="coluna">
-                <div class="refeicao">
-                    <label for="nome">Café da manhã:</label>
-                    <input type="text" name="txtCafe" placeholder="Pão, Ovos, Sucrilhos...">
-
-                    <h3>Quantidade:</h3>
-                    <input type="text" name="txtQtd" placeholder="1 Pão, 2 Ovos...">
-
-                    <button class="btn-alimentacao">Enviar</button>
-
+        <div class="formulario">
+            <!-- Inicio entrada de dados -->
+            <form name="frmHealth">
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" name="nome" id="txtNome" placeholder="nome">
+                <div class="Radio">
+                    <h3>Você é homem ou <span class="span-roxo">mulher?</span></h3>
+                    <input type="radio" name="grupo" id="m"> Masculino
+                    <input type="radio" name="grupo" id="f"> Feminino
                 </div>
 
-                <div class="refeicao">
-                    <label for="nome">Almoço:</label>
-                    <input type="text" name="txtAlmoco" placeholder="Arroz, Feijão, Frango...">
+                <label for="nome">Digite sua idade:</label>
+                <input type="number" name="txtIdade" placeholder="Idade">
 
-                    <h3>Quantidade:</h3>
-                    <input type="text" name="txtQtd" placeholder="1 Frango, 2 Ovos...">
+                <label for="nome">Digite seu peso:</label>
+                <input type="number" name="txtPeso" placeholder="Peso (Kg)">
 
-                    <button class="btn-alimentacao">Enviar</button>
+                <label for="nome">Digite sua altura:</label>
+                <input type="number" name="txtAltura" placeholder="Altura (cm)">
 
+                <h3 class="h3Select">Qual é o seu <span class="span-verde">objetivo?</span></h3>
+                <select name="nivel" id="atividade">
+                    <option value="" selected>Selecione aqui:</option>
+                    <option value="">Perder peso</option>
+                    <option value="">Ganhar massa muscular</option>
+                    <option value="">Se manter em seu peso</option> 
+                </select>
+                <div id="button">
+                    <a href="alimentacao.html">Responder perguntas</a>
                 </div>
-            </div>
-
-            <div class="coluna">
-                <div class="refeicao">
-                    <label for="nome">Lanche:</label>
-                    <input type="text" name="txtLanche" placeholder="Salgado, Bolo, Sucrilhos...">
-
-                    <h3>Quantidade:</h3>
-                    <input type="text" name="txtQtd" placeholder="1 Bolo, 2 Salgados...">
-
-                    <button class="btn-alimentacao">Enviar</button>
-
-                </div>
-
-                <div class="refeicao">
-                    <label for="nome">Jantar:</label>
-                    <input type="text" name="txtLanche" placeholder="Arroz, Estrogonofe, Bife...">
-
-                    <h3>Quantidade:</h3>
-                    <input type="text" name="txtQtd" placeholder="1 Bife, 2 Frangos...">
-
-                    <button class="btn-alimentacao">Enviar</button>
-
-
-                </div>
-            </div>
-
-        </section>
-
-
-
+            </form>
+            <!-- Fim entrada de dados -->
+        </div>
+        
     </main>
 
-    <!-- Fim do main -->
 
 
     <!-- Inicio do footer -->
@@ -133,9 +109,7 @@
     </footer>
     <!-- Fim do footer -->
 
-
-
-
+    <script src="js/teste.js"></script>
     <script src="js/script.js"></script>
 </body>
 
