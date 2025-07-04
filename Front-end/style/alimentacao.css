@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+/* ---------- Inicio da area de perguntas ---------- */
+#alimentacao {
+    text-align: center;
+}
+
+#alimentacao h1 {
+    margin: 15px 0px;
+}
+
+.coluna {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coluna .refeicao {
+    width: 300px;
+    height: auto;
+    padding: 50px 0px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+}
+
+.refeicao input[type="text"] {
+    padding: 8px;
+    margin: 10px 0px;
+    outline: none;
+    border: 1px solid #2cb17c;
+    border-radius: 5px;
+    width: 260px;
+}
+
+.refeicao label {
+    font-weight: 600;
+}
+
+.refeicao h3 {
+    margin-top: 30px;
+}
+
+.btn-alimentacao {
+    padding: 10px 15px;
+    margin-top: 25px;
+    background-color: #3e2b8b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.btn-alimentacao:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- FIM da area de perguntas ---------- */
+
+@media (min-width: 576px) {}
+
+/* Tablet Portrait */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+    /* ---------- Inicio da area de perguntas ---------- */
+
+    #alimentacao h1 {
+        margin: 25px 0px;
+    }
+
+    .coluna {
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    .coluna .refeicao {
+        width: 400px;
+        height: auto;
+        padding: 50px 0px;
+        margin: 20px 0px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+    }
+
+    .refeicao input[type="text"] {
+        padding: 8px;
+        margin: 10px 0px;
+        outline: none;
+        border: 1px solid #2cb17c;
+        border-radius: 5px;
+        width: 340px;
+    }
+
+    .refeicao label {
+        font-weight: 600;
+    }
+
+    .refeicao h3 {
+        margin-top: 30px;
+    }
+
+    .btn-alimentacao {
+        padding: 15px 30px;
+    }
+    /* ---------- FIM da area de perguntas ---------- */
+}
+
+/* PCS e Notebooks */
+@media (min-width: 1200px) {}

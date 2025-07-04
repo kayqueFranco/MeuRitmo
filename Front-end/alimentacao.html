@@ -7,7 +7,7 @@
     <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
     <title>MeuRitmo</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/alimentacao.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -20,7 +20,7 @@
         <!-- Menu -->
         <nav id="navbar">
             <!-- Logotipo -->
-            <img class="logo" src="img/MeuRitmo-logo-Photoroom.png" alt="">
+            <a href="index.html"><img class="logo" src="img/MeuRitmo-logo-Photoroom.png" alt=""></a>
 
             <ul class="nav-list">
                 <li class="nav-item active"><a href="index.html">Inicio</a></li>
@@ -29,8 +29,6 @@
 
                 <li><a href="#" class="btn-cadastrar">Login</a></li>
             </ul>
-
-
 
             <div id="menu-icon">
                 <img src="img/burger-bar.png" alt="">
@@ -41,11 +39,69 @@
 
     <!-- Inicio do main -->
 
-    <main></main>
+    <main>
+
+        <section id="alimentacao">
+            <h1>Coloque aqui o que você <span class="span-verde" >comeu</span> no seu dia!</h1>
+
+            <div class="coluna">
+                <div class="refeicao">
+                    <label for="nome">Café da manhã:</label>
+                    <input type="text" name="txtCafe" placeholder="Pão, Ovos, Sucrilhos...">
+
+                    <h3>Quantidade:</h3>
+                    <input type="text" name="txtQtd" placeholder="1 Pão, 2 Ovos...">
+
+                    <button class="btn-alimentacao">Enviar</button>
+
+                </div>
+
+                <div class="refeicao">
+                    <label for="nome">Almoço:</label>
+                    <input type="text" name="txtAlmoco" placeholder="Arroz, Feijão, Frango...">
+
+                    <h3>Quantidade:</h3>
+                    <input type="text" name="txtQtd" placeholder="1 Frango, 2 Ovos...">
+
+                    <button class="btn-alimentacao">Enviar</button>
+
+                </div>
+            </div>
+
+            <div class="coluna">
+                <div class="refeicao">
+                    <label for="nome">Lanche:</label>
+                    <input type="text" name="txtLanche" placeholder="Salgado, Bolo, Sucrilhos...">
+
+                    <h3>Quantidade:</h3>
+                    <input type="text" name="txtQtd" placeholder="1 Bolo, 2 Salgados...">
+
+                    <button class="btn-alimentacao">Enviar</button>
+
+                </div>
+
+                <div class="refeicao">
+                    <label for="nome">Jantar:</label>
+                    <input type="text" name="txtLanche" placeholder="Arroz, Estrogonofe, Bife...">
+
+                    <h3>Quantidade:</h3>
+                    <input type="text" name="txtQtd" placeholder="1 Bife, 2 Frangos...">
+
+                    <button class="btn-alimentacao">Enviar</button>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+    </main>
 
     <!-- Fim do main -->
 
-    
+
     <!-- Inicio do footer -->
     <footer>
         <img src="/Front-end/img/wave.svg" alt="imagem do footer">
