@@ -3,7 +3,6 @@ import cors from"cors"
 import UsuarioService from "./services/UsuarioService";
 import SonoService from "./services/SonoService";
 import MetaService from "./services/MetaService";
-import AlimentacaoService from "./services/AlimentacaoService";
 import InfoPessoaisService from "./services/InfoPessoaisService";
 import ExercicioService from "./services/ExercicioService";
 import Hidratacaoservice from "./services/HidratacaoService";
@@ -19,7 +18,7 @@ app.use(cors())
 const usu = new UsuarioService()
 const son = new SonoService()
 const met = new MetaService()
-const ali = new AlimentacaoService()
+
 const inf = new InfoPessoaisService()
 const exe = new ExercicioService();
 const hidra = new Hidratacaoservice()
@@ -58,14 +57,6 @@ app.post("/api/v1/meta/cadastro", (req,res)=>{
     met.cadastroMeta(req,res)
 })
 
-// #################### ALIMENTAÇãO ##########################
-app.get("/api/v1/alimentacao/listar", (req,res)=>{
-    ali.listarAlimentacao(req,res)
-})
-
-app.post("/api/v1/alimentacao/cadastro", (req,res)=>{
-    ali.cadastroAlimentacao(req,res)
-})
 
 // ################## Informações Pessoais ###################
 app.get("/api/v1/cadinfo/listar", (req,res)=>{
