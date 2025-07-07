@@ -1,6 +1,6 @@
 # 📚 Documentação do Front-end - Meu Ritmo
 
-Esta documentação descreve as principais funcionalidades e estrutura da interface do usuário do projeto **Meu Ritmo**. O front-end foi desenvolvido com **HTML5**, **CSS3**, **JavaScript**, **Bootstrap** e **TypeScript**, oferecendo uma experiência simples e direta para o usuário.
+Esta documentação descreve as principais funcionalidades e estrutura da interface do usuário do projeto **Meu Ritmo**. O front-end foi desenvolvido com **HTML5**, **CSS3**, **JavaScript** e **TypeScript**, oferecendo uma experiência simples e interativa para o usuário.
 
 ---
 
@@ -10,7 +10,6 @@ Esta documentação descreve as principais funcionalidades e estrutura da interf
 * CSS3
 * JavaScript
 * TypeScript
-
 
 ---
 
@@ -25,46 +24,54 @@ Esta documentação descreve as principais funcionalidades e estrutura da interf
 │       ├── home.html
 │       ├── login.html
 │       ├── cadastro.html
-│       ├── sono.html
-│       ├── hidratacao.html
-│       └── exercicio.html
+│       ├── questionario.html
+│       ├── metas.html
+│       ├── grafico.html
+│       └── perfil.html
 ```
 
 ---
 
 ## 📌 Funcionalidades Principais
 
-* **Login e cadastro** com validação de campos obrigatórios
-* **Registro de dados** (sono, hidratação, exercício) via formulários
-* **Visualização de histórico** dos registros por usuário
-* **Design responsivo** para dispositivos móveis e desktops
+* Cadastro e login de usuários com validações
+* Questionário de hábitos (água, sono, treino, alimentação)
+* Visualização e análise de metas baseadas nos objetivos
+* Geração de gráficos com base nas respostas do usuário
+* Sugestão de atividades e dicas personalizadas
+* Layout responsivo e intuitivo
 
 ---
 
 ## 🎨 Navegação
 
-A navegação entre páginas é feita por meio de links diretos. Após o login, o usuário é direcionado para o painel com as opções de registros.
+A navegação é realizada por links e redirecionamentos após autenticação. As páginas estão divididas por tema: questionário, metas, gráficos e perfil.
 
 ---
 
 ## 🔄 Integração com o Back-end
 
-As requisições são feitas com `fetch` e utilizam a API do back-end para CRUD:
+As requisições utilizam `fetch` e seguem o padrão REST com a API criada no back-end.
 
-### Exemplo de requisição `POST`:
+### Exemplo de requisição `POST` para respostas:
 
 ```js
-fetch("http://localhost:3000/sono", {
+fetch("http://localhost:3000/resposta", {
   method: "POST",
   headers: {
     "Content-Type": "application/json"
   },
   body: JSON.stringify({
     id_usuario: 1,
-    hora_dormiu: "22:30",
-    hora_acordou: "06:30",
+    objetivo: "perder peso",
+    horas_sono: 7,
     qualidade_sono: "Boa",
-    hora_durmidas: 8,
+    quantidade_agua_ml: 2000,
+    exercicios_semana: 3,
+    tempo_treino: 40,
+    intensidade_treino: "Moderada",
+    atividade_diaria: "Ativa",
+    alimentacao: "Equilibrada",
     datadia: "2025-06-20"
   })
 })
@@ -74,15 +81,15 @@ fetch("http://localhost:3000/sono", {
 
 ## 💡 Boas Práticas
 
-* Reaproveitamento de componentes com Bootstrap
-* Validações de formulário no client-side
-* Uso de `localStorage` para armazenar o token JWT (se necessário)
+* Separação clara de responsabilidades por página
+* Uso de `localStorage` para persistência de dados (como ID do usuário)
+* Validação de formulários e mensagens de erro para usuário
 
 ---
 
 ## 🚧 Em Desenvolvimento
 
-Novas melhorias visuais e funcionais estão sendo implementadas.
+Funcionalidades como edição de perfil, exportação de dados e sugestões automáticas estão em desenvolvimento.
 
 ---
 
@@ -90,3 +97,4 @@ Novas melhorias visuais e funcionais estão sendo implementadas.
 
 * [Davi Do Couto](https://github.com/Davicouto530)
 * [Luiz Damas](https://github.com/LuizDamasAmorim)
+
