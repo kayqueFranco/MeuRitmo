@@ -1,3 +1,10 @@
+
+![GitHub License](https://img.shields.io/github/license/kayqueFranco/MeuRitmo)
+
+
+
+
+
 # Meu Ritmo - Projeto Integrador (SENAC)
 
 **Meu Ritmo** é um projeto voltado para o bem-estar físico e emocional, com o objetivo de ajudar pessoas a monitorarem hábitos saudáveis como hidratação, sono, atividade física e alimentação. A plataforma permite que o usuário registre e acompanhe seus dados diários, promovendo mais consciência sobre sua rotina e incentivando uma vida mais equilibrada.
