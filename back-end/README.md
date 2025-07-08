@@ -10,7 +10,6 @@ Este documento descreve as principais funcionalidades e estrutura da API RESTful
 * TypeScript
 * MySQL
 * JWT (Autenticação)
-
 * bcryptjs
 
 ---
@@ -55,20 +54,10 @@ POST /login
 * `GET /usuario` → Listar todos os usuários
 * `GET /usuario/:id` → Buscar usuário por ID
 
-### Sono
+### Resposta
 
-* `POST /sono` → Registrar informações de sono
-* `GET /sono/:id_usuario` → Listar sono por usuário
-
-### Hidratação
-
-* `POST /hidratacao` → Registrar ingestão de água
-* `GET /hidratacao/:id_usuario` → Listar hidratação por usuário
-
-### Exercício
-
-* `POST /exercicio` → Registrar atividade física
-* `GET /exercicio/:id_usuario` → Listar exercícios por usuário
+* `POST /resposta` → Registrar questionário do usuário
+* `GET /resposta/:id_usuario` → Buscar respostas do usuário
 
 ---
 
@@ -91,6 +80,37 @@ export const conexao = mysql.createConnection({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME
 });
+```
+
+---
+
+## 🧾 Scripts SQL das Tabelas
+
+```sql
+CREATE TABLE usuario (
+  id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+  nome_usuario VARCHAR(50) NOT NULL,
+  email VARCHAR(100),
+  senha VARCHAR(255) NOT NULL
+);
+```
+
+```sql
+CREATE TABLE resposta (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  id_usuario INT NOT NULL,
+  objetivo VARCHAR(50) NOT NULL,
+  horas_sono INT,
+  qualidade_sono VARCHAR(50),
+  quantidade_agua_ml INT,
+  exercicios_semana INT,
+  tempo_treino INT,
+  intensidade_treino VARCHAR(50),
+  atividade_diaria VARCHAR(50),
+  alimentacao VARCHAR(100),
+  datadia DATE,
+  FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
+);
 ```
 
 ---
@@ -128,6 +148,6 @@ npm run dev
 
 ## 👨‍💻 Desenvolvido por
 
-* [ Kayque Franco](https://github.com/kayqueFranco)
+* [Kayque Franco](https://github.com/kayqueFranco)
 * [Murillo Mendonça](https://github.com/mmendoncamascarenha)
 * [Arthur Cruz](https://github.com/arthurcruzalves)

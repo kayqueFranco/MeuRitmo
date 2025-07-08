@@ -1,65 +1,29 @@
-import { resolve } from "path";
-import Usuario from "../classes/Usuario";
-import bcrypt from "bcrypt"
 import { rejects } from "assert";
+import Resposta from "../classes/Resposta";
+import Usuario from "../classes/Usuario";
 import { conexao } from "../database/Config";
-import { error } from "console";
+import Commands from "../interfaces/commands";
 import CommandsUsuaro from "../interfaces/CommandsUsuario";
 
+
 export default class UsuarioRepository implements CommandsUsuaro<Usuario>{
-    login(usuario: string, senha: string):Promise<any> {
-        return new Promise((resolve, reject)=>{
-            conexao.query(`SELECT * from usuario WHERE  nomeusuario=?`,
-                [
-                    usuario
-                ],
-                (erro,result:any)=>{
-                    if(erro){
-                        return reject(erro)
-                    }
-                    else{
-                        return resolve(result)
-                    }
-                }
-            )
-        })
+    login(usuario: string, senha: string) {
+        throw new Error("Method not implemented.");
     }
     loginUCE(usuario: string, emiail: string, senha: string) {
         throw new Error("Method not implemented.");
     }
     Cadastrar(obj: Usuario): Promise<Usuario> {
-      return new Promise((resolve,rejects)=>{
-    
-        conexao.query("INSERT INTO usuario(nome,email,idade,telefone,senha,nomeusuario) values(?,?,?,?,?,?)",
-            [
-                obj.nome,
-                obj.email,
-                obj.idade,
-                obj.telefone,
-                obj.senha,
-                obj.nomeusuario],
-                (error,result)=>{
-                    if(error){
-                        return rejects(error)
-                    }
-                    else{
-                        return resolve(obj)
-                    }
-                }
-        )
-      })
-
-
-
+        throw new Error("Method not implemented.");
     }
     Listar(): Promise<Usuario[]> {
-        return new Promise((resolve,rejects)=>{
-            conexao.query("Select * from usuario",(erro,result)=>{
+        return new Promise ((resolve, reject)=>{
+            conexao.query("Select * from usuario", (erro, result)=>{
                 if(erro){
-                    return rejects(erro)
+                    return reject(erro)
                 }
-                else{
-                    return resolve(result as Usuario[])
+                else {
+                    return resolve (result as Usuario[])
                 }
             })
         })
@@ -73,5 +37,5 @@ export default class UsuarioRepository implements CommandsUsuaro<Usuario>{
     PesquisarId(id: number): Promise<Usuario> {
         throw new Error("Method not implemented.");
     }
-    
+
 }

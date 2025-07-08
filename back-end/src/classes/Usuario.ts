@@ -1,9 +1,10 @@
-export default class Usuario {
-id!:number;
-nome!:string;
-email?:string;
-telefone?:string;
-idade!:Number;
-senha!:string;
-nomeusuario!:string
+export default class Usuario{
+    id!:number;
+    nome!:string;
+    data_nascimento!:Date;
+    peso!:number;
+    objetivo!:string;
+    email!:string;
+    nomeusuario!:string;
+    senha!:string
 }
