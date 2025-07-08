@@ -33,6 +33,7 @@ header {
     align-items: center;
     margin: 0 auto;
     color: #000;
+    text-transform: uppercase;
 }
 
 .logo {

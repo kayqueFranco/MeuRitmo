@@ -7,7 +7,7 @@
     <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
     <title>MeuRitmo</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/informacoes.css">
+    <link rel="stylesheet" href="style/perguntas.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,42 +38,74 @@
     <!-- Fim do header -->
 
     <main id="container">
-        <h1>Perguntas                  <span class="span-verde">iniciais</span></h1>
+        <h1>Análise dos seus <span class="span-verde">hábitos</span> diários</h1>
 
         <div class="formulario">
             <!-- Inicio entrada de dados -->
             <form name="frmHealth">
-                <label for="nome">Digite seu nome:</label>
-                <input type="text" name="nome" id="txtNome" placeholder="nome">
-                <div class="Radio">
-                    <h3>Você é homem ou <span class="span-roxo">mulher?</span></h3>
-                    <input type="radio" name="grupo" id="m"> Masculino
-                    <input type="radio" name="grupo" id="f"> Feminino
+                <div id="div-agua">
+                    <label for="nome">Quanto de água você costuma beber por dia?</label>
+                    <p><input type="radio" name="agua" value="Menos de 1 litro">Menos de 1 litro</p>
+                    <p><input type="radio" name="agua" value="1 - 2 litros">1 - 2 litros</p>
+                    <p><input type="radio" name="agua" value="2 - 3 litros">2 - 3 litros</p>
+                    <p><input type="radio" name="agua" value="Mais 3 litros">Mais 3 litros</p>
                 </div>
 
-                <label for="nome">Digite sua idade:</label>
-                <input type="number" name="txtIdade" placeholder="Idade">
+                <div id="div-exercicios">
+                    <label for="nome">Quantos dias por semana você faz exercícios físicos?</label>
+                    <p><input type="radio" name="exercicios-dias" value="1 - 2 dias">1 - 2 dias</p>
+                    <p><input type="radio" name="exercicios-dias" value="3 - 5 dias">3 - 5 dias</p>
+                    <p><input type="radio" name="exercicios-dias" value="5 - 7 dias">5 - 7 dias</p>
 
-                <label for="nome">Digite seu peso:</label>
-                <input type="number" name="txtPeso" placeholder="Peso (Kg)">
+                    <label for="nome">Quanto tempo dura, em média, cada treino?</label>
+                    <p><input type="radio" name="exercicios-duracao" value="Menos de 30 minutos">Menos de 30 minutos</p>
+                    <p><input type="radio" name="exercicios-duracao" value="30 a 60 minutos">30 a 60 minutos</p>
+                    <p><input type="radio" name="exercicios-duracao" value="Mais de 1 hora">Mais de 1 hora</p>
+                </div>
 
-                <label for="nome">Digite sua altura:</label>
-                <input type="number" name="txtAltura" placeholder="Altura (cm)">
+                <div id="div-dormir">
+                    <label for="nome">Quantas horas você costuma dormir por noite?</label>
+                    <p><input type="radio" name="dormir" value="Menos de 5hr">Menos de 5hr</p>
+                    <p><input type="radio" name="dormir" value="5 - 7h">5 - 7h</p>
+                    <p><input type="radio" name="dormir" value="7 - 8h">7 - 8h</p>
+                    <p><input type="radio" name="dormir" value="Mais de 8h">Mais de 8h</p>
+                </div>
 
-                <h3 class="h3Select">Qual é o seu <span class="span-verde">objetivo?</span></h3>
-                <select name="nivel" id="atividade">
-                    <option value="" selected>Selecione aqui:</option>
-                    <option value="">Perder peso</option>
-                    <option value="">Ganhar massa muscular</option>
-                    <option value="">Se manter em seu peso</option> 
-                </select>
+                <div id="div-atividade-fisica">
+                    <label for="nome">Como é o seu nível de atividade física no dia a dia?</label>
+                    <p><input type="radio" name="atividade" value="Sedentario">Sedentário</p>
+                    <p><input type="radio" name="atividade" value="Moderado">Moderado</p>
+                    <p><input type="radio" name="atividade" value="Ativo">Ativo</p>
+                </div>
+
+                <div id="div-frutas-vegetais">
+                    <label for="nome">Você costuma comer frutas e vegetais diariamente?</label>
+                    <p><input type="radio" name="frutas" value="Nunca">Nunca</p>
+                    <p><input type="radio" name="frutas" value="As vezes">Às vezes</p>
+                    <p><input type="radio" name="frutas" value="Sempre">Sempre</p>
+                </div>
+
+                <div id="div-gordura">
+                    <label for="nome">Você consome doces, frituras ou refrigerantes com frequência?</label>
+                    <p><input type="radio" name="gordura" value="Sim, todos os dias">Sim, todos os dias</p>
+                    <p><input type="radio" name="gordura" value="As vezes">Às vezes</p>
+                    <p><input type="radio" name="gordura" value="Raramente">Raramente</p>
+                </div>
+
+                <div id="div-fumar-beber">
+                    <label for="nome">Você fuma ou consome bebidas alcoólicas com frenquência?</label>
+                    <p><input type="radio" name="fumar" value="Sim">Sim</p>
+                    <p><input type="radio" name="fumar" value="Raramente">Raramente</p>
+                    <p><input type="radio" name="fumar" value="Não">Não</p>
+                </div>
+
                 <div id="button">
-                    <a href="alimentacao.html">Responder perguntas</a>
+                    <a href="alimentacao.html">Ver o gráfico</a>
                 </div>
             </form>
             <!-- Fim entrada de dados -->
         </div>
-        
+
     </main>
 
 

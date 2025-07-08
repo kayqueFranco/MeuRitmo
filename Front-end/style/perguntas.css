@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container h1 {
+    text-align: center;
+}
+
+.formulario div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 25px;
+}
+
+.formulario div p {
+    width: 320px;
+    display: flex;
+    gap: 15px;
+}
+
+.formulario div label {
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.formulario div select {
+    width: 300px;
+    padding: 10px;
+}
+
+.formulario #div-exercicios label {
+    margin: 20px 0px;
+}
+
+#button a {
+    color: #fff;
+    background-color: #3e2b8b;
+    padding: 10px;
+    margin-top: 50px;
+    text-align: center;
+    width: 150px;
+    border: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
