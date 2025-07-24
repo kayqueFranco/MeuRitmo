@@ -89,7 +89,8 @@ input[type="text"] {
 @media (min-width: 1200px) {
 
     .formulario form input[type="number"],
-    input[type="text"], #atividade {
+    input[type="text"],
+    #atividade {
         width: 420px;
     }
 
@@ -109,11 +110,11 @@ input[type="text"] {
     #button a {
         font-weight: 800;
         padding: 15px;
-        transition: 0.5s;
+        transition: 0.3s ease;
     }
 
     #button a:hover {
-        font-size: 1.1em;
+       background-color: #625499;
     }
 
 }
