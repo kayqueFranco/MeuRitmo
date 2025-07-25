@@ -66,11 +66,11 @@ input[type="text"] {
     margin: 60px 0px 10px 0px;
 }
 
-#button a {
+#button {
     color: #fff;
     background-color: #3e2b8b;
     padding: 10px;
-    width: 180px;
+    width: 140px;
     border: #fff;
     border-radius: 10px;
     cursor: pointer;

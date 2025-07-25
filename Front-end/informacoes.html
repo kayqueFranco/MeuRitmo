@@ -49,33 +49,31 @@
                 <input type="text" name="nome" id="txtNome" placeholder="nome">
                 <div class="Radio">
                     <h3>Você é homem ou <span class="span-roxo">mulher?</span></h3>
-                    <input type="radio" name="grupo" id="m"> Masculino
-                    <input type="radio" name="grupo" id="f"> Feminino
+                    <input type="radio" name="grupo" value="masculino" id="masculino"> Masculino
+                    <input type="radio" name="grupo" value="feminino" id="feminino"> Feminino
                 </div>
 
                 <label for="nome">Digite sua idade:</label>
-                <input type="number" name="txtIdade" placeholder="Idade">
+                <input type="number" name="" id="txtIdade" placeholder="Idade">
 
                 <label for="nome">Digite seu peso:</label>
-                <input type="number" name="txtPeso" placeholder="Peso (Kg)">
+                <input type="number" name="txtPeso" id="txtPeso" placeholder="Peso (Kg)">
 
                 <label for="nome">Digite sua altura:</label>
-                <input type="number" name="txtAltura" placeholder="Altura (cm)">
+                <input type="number" name="txtAltura" id="txtAltura" placeholder="Altura (cm)">
 
                 <h3 class="h3Select">Qual é o seu <span class="span-verde">objetivo?</span></h3>
                 <select name="nivel" id="atividade">
                     <option value="" selected>Selecione aqui:</option>
-                    <option value="">Perder peso</option>
-                    <option value="">Ganhar massa muscular</option>
-                    <option value="">Se manter em seu peso</option> 
+                    <option value="perder_peso">Perder peso</option>
+                    <option value="ganhar_massa">Ganhar massa muscular</option>
+                    <option value="manter_peso">Se manter em seu peso</option>
                 </select>
-                <div id="button">
-                    <a href="perguntas.html">Responder perguntas</a>
-                </div>
+                <button id="button" onclick="coletarDados(event)">Enviar</button>
             </form>
             <!-- Fim entrada de dados -->
         </div>
-        
+
     </main>
 
 
@@ -113,7 +111,6 @@
 
 
 
-    <script src="js/teste.js"></script>
     <script src="js/script.js"></script>
 </body>
 
