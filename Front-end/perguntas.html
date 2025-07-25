@@ -40,10 +40,12 @@
     <main id="container">
         <h1>Análise dos seus <span class="span-verde">hábitos</span> diários</h1>
 
+        <p class="p-titulo">Responda às perguntas abaixo para que possamos analisar seus hábitos e te ajudar a alcançar seus objetivos com mais saúde e eficiência !</p>
+
         <div class="formulario">
             <!-- Inicio entrada de dados -->
             <form name="frmHealth">
-                <div id="div-agua">
+                <div id="div-agua" class="card-perguntas">
                     <label for="nome">Quanto de <span class="span-roxo">água</span> você costuma beber por dia?</label>
                     <p><input type="radio" name="agua" value="Menos de 1 litro">Menos de 1 litro</p>
                     <p><input type="radio" name="agua" value="1 - 2 litros">1 - 2 litros</p>
@@ -51,48 +53,50 @@
                     <p><input type="radio" name="agua" value="Mais 3 litros">Mais 3 litros</p>
                 </div>
 
-                <div id="div-exercicios">
+                <div id="div-exercicios" class="card-perguntas">
                     <label for="nome">Quantos dias por semana você faz <span class="span-roxo">exercícios</span> físicos?</label>
                     <p><input type="radio" name="exercicios-dias" value="1 - 2 dias">1 - 2 dias</p>
                     <p><input type="radio" name="exercicios-dias" value="3 - 5 dias">3 - 5 dias</p>
                     <p><input type="radio" name="exercicios-dias" value="5 - 7 dias">5 - 7 dias</p>
+                </div>
 
+                <div id="div-tempo-exercicios" class="card-perguntas">
                     <label for="nome">Quanto tempo dura, em média, cada <span class="span-roxo">treino</span>?</label>
                     <p><input type="radio" name="exercicios-duracao" value="Menos de 30 minutos">Menos de 30 minutos</p>
                     <p><input type="radio" name="exercicios-duracao" value="30 a 60 minutos">30 a 60 minutos</p>
                     <p><input type="radio" name="exercicios-duracao" value="Mais de 1 hora">Mais de 1 hora</p>
                 </div>
 
-                <div id="div-dormir">
+                <div id="div-dormir" class="card-perguntas">
                     <label for="nome">Quantas horas você costuma <span class="span-roxo">dormir</span> por noite?</label>
-                    <p><input type="radio" name="dormir" value="Menos de 5hr">Menos de 5hr</p>
+                    <p><input type="radio" name="dormir" value="Menos de 5hr">Menos de 5h</p>
                     <p><input type="radio" name="dormir" value="5 - 7h">5 - 7h</p>
                     <p><input type="radio" name="dormir" value="7 - 8h">7 - 8h</p>
                     <p><input type="radio" name="dormir" value="Mais de 8h">Mais de 8h</p>
                 </div>
 
-                <div id="div-atividade-fisica">
+                <div id="div-atividade-fisica" class="card-perguntas">
                     <label for="nome">Como é o seu nível de <span class="span-roxo">atividade física</span> no dia a dia?</label>
                     <p><input type="radio" name="atividade" value="Sedentario">Sedentário</p>
                     <p><input type="radio" name="atividade" value="Moderado">Moderado</p>
                     <p><input type="radio" name="atividade" value="Ativo">Ativo</p>
                 </div>
 
-                <div id="div-frutas-vegetais">
+                <div id="div-frutas-vegetais" class="card-perguntas">
                     <label for="nome">Você costuma comer <span class="span-roxo">frutas</span> e <span class="span-roxo">vegetais</span> diariamente?</label>
                     <p><input type="radio" name="frutas" value="Nunca">Nunca</p>
                     <p><input type="radio" name="frutas" value="As vezes">Às vezes</p>
                     <p><input type="radio" name="frutas" value="Sempre">Sempre</p>
                 </div>
 
-                <div id="div-gordura">
+                <div id="div-gordura" class="card-perguntas">
                     <label for="nome">Você <span class="span-roxo">consome</span> doces, frituras ou refrigerantes com frequência?</label>
                     <p><input type="radio" name="gordura" value="Sim, todos os dias">Sim, todos os dias</p>
                     <p><input type="radio" name="gordura" value="As vezes">Às vezes</p>
                     <p><input type="radio" name="gordura" value="Raramente">Raramente</p>
                 </div>
 
-                <div id="div-fumar-beber">
+                <div id="div-fumar-beber" class="card-perguntas">
                     <label for="nome">Você fuma ou consome bebidas alcoólicas com <span class="span-roxo">frenquência?</span> </label>
                     <p><input type="radio" name="fumar" value="Sim">Sim</p>
                     <p><input type="radio" name="fumar" value="Raramente">Raramente</p>
