@@ -30,11 +30,6 @@
     margin-bottom: 10px;
 }
 
-.formulario div select {
-    width: 300px;
-    padding: 10px;
-}
-
 .formulario #div-exercicios label {
     margin: 20px 0px;
 }
@@ -49,4 +44,99 @@
     border: #fff;
     border-radius: 10px;
     cursor: pointer;
+}
+
+/* Celular Horizontal */
+@media (min-width: 576px) {
+    .formulario div p {
+        width: 180px;
+    }
+}
+
+
+/* Tablet Portrait */
+@media (min-width: 768px) {
+    /* ---------- Inicio do footer ---------- */
+
+    footer {
+        height: 300px;
+    }
+
+    /* ---------- FIM do footer ---------- */
+}
+
+
+/* Tablet Landscape */
+@media (min-width: 992px) {
+
+    /* Cabeçalho */
+    .logo {
+        width: 240px;
+        height: 240px;
+    }
+
+    /* ---------- Inicio do footer ---------- */
+
+    footer {
+        height: 240px;
+    }
+
+    #footer-itens {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* ---------- FIM do footer ---------- */
+}
+
+/* PCS e Notebooks */
+@media (min-width: 1200px) {
+
+    /* Cabeçalho */
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+        gap: 20px;
+        position: static;
+        background-color: transparent;
+    }
+
+    .nav-list li:first-child {
+        margin-top: 0px;
+    }
+
+    .nav-item.active a {
+        border-bottom: 3px solid #3e2b8b;
+        margin-right: 30px;
+    }
+
+    .btn-cadastrar {
+        margin: 0px 20px 0px 50px;
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    #menu-icon img {
+        width: 0px;
+        margin-right: 0px;
+    }
+
+    /* Fim - Cabeçalho */
+
+    /* ---------- Inicio do footer ---------- */
+
+    footer {
+        height: 280px;
+    }
+
+    /* ---------- FIM do footer ---------- */
 }
