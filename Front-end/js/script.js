@@ -77,11 +77,6 @@ if (formHabitos) {
     const gordura = pegarResposta('gordura');
     const fumar = pegarResposta('fumar');
 
-    if (!agua || !exerciciosDias || !exerciciosDuracao || !dormir || !atividade || !frutas || !gordura || !fumar) {
-      alert('Por favor, responda todas as perguntas!');
-      return;
-    }
-
     function pontuarResposta(pergunta, resposta) {
       const tabela = {
         perder_peso: {

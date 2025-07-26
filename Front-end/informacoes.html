@@ -46,24 +46,24 @@
             <!-- Inicio entrada de dados -->
             <form name="frmHealth">
                 <label for="nome">Digite seu nome:</label>
-                <input type="text" name="nome" id="txtNome" placeholder="nome">
+                <input required type="text" name="nome" id="txtNome" placeholder="nome">
                 <div class="Radio">
                     <h3>Você é homem ou <span class="span-roxo">mulher?</span></h3>
-                    <input type="radio" name="grupo" value="masculino" id="masculino"> Masculino
+                    <input required type="radio" name="grupo" value="masculino" id="masculino"> Masculino
                     <input type="radio" name="grupo" value="feminino" id="feminino"> Feminino
                 </div>
 
                 <label for="nome">Digite sua idade:</label>
-                <input type="number" name="" id="txtIdade" placeholder="Idade">
+                <input required type="number" name="" id="txtIdade" placeholder="Idade">
 
                 <label for="nome">Digite seu peso:</label>
-                <input type="number" name="txtPeso" id="txtPeso" placeholder="Peso (Kg)">
+                <input required type="number" name="txtPeso" id="txtPeso" placeholder="Peso (Kg)">
 
                 <label for="nome">Digite sua altura:</label>
-                <input type="number" name="txtAltura" id="txtAltura" placeholder="Altura (cm)">
+                <input required type="number" name="txtAltura" id="txtAltura" placeholder="Altura (cm)">
 
                 <h3 class="h3Select">Qual é o seu <span class="span-verde">objetivo?</span></h3>
-                <select name="nivel" id="atividade">
+                <select required name="nivel" id="atividade">
                     <option value="" selected>Selecione aqui:</option>
                     <option value="perder_peso">Perder peso</option>
                     <option value="ganhar_massa">Ganhar massa muscular</option>
