@@ -28,6 +28,10 @@
     margin-top: 10px;
 }
 
+.formulario form [type="radio"] {
+    accent-color: #3e2b8b;;
+}
+
 .formulario div {
     display: flex;
     justify-content: center;

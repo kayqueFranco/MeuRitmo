@@ -20,6 +20,10 @@
     margin: 20px 0px 20px 0px;
 }
 
+.formulario form [type="radio"] {
+    accent-color: #3e2b8b;;
+}
+
 .formulario form input[type="number"],
 input[type="text"] {
     margin: 10px 0px;
