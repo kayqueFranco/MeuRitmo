@@ -1,17 +1,14 @@
 document.querySelector('form[name="frmHealth"]').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Pega o objetivo salvo no localStorage (da primeira página)
     const objetivo = localStorage.getItem('objetivo');
     console.log('Objetivo:', objetivo);
 
-    // Função auxiliar para pegar o valor selecionado de um grupo de rádio
     function pegarResposta(name) {
         const resp = document.querySelector(`input[name="${name}"]:checked`);
         return resp ? resp.value : null;
     }
 
-    // Pega todas as respostas
     const agua = pegarResposta('agua');
     const exerciciosDias = pegarResposta('exercicios-dias');
     const exerciciosDuracao = pegarResposta('exercicios-duracao');
@@ -21,16 +18,11 @@ document.querySelector('form[name="frmHealth"]').addEventListener('submit', func
     const gordura = pegarResposta('gordura');
     const fumar = pegarResposta('fumar');
 
-    console.log({ agua, exerciciosDias, exerciciosDuracao, dormir, atividade, frutas, gordura, fumar });
-
-
-    // Verifica se alguma está vazia
     if (!agua || !exerciciosDias || !exerciciosDuracao || !dormir || !atividade || !frutas || !gordura || !fumar) {
         alert('Por favor, responda todas as perguntas!');
         return;
     }
 
-    // Função para pontuar as respostas baseado no objetivo
     function pontuarResposta(pergunta, resposta) {
         const tabela = {
             perder_peso: {
@@ -170,21 +162,23 @@ document.querySelector('form[name="frmHealth"]').addEventListener('submit', func
         return tabela[objetivo]?.[pergunta]?.[resposta] || 0;
     }
 
-    // Calcule a pontuação total
-    const pontuacaoTotal =
-        pontuarResposta('agua', agua) +
-        pontuarResposta('exercicios-dias', exerciciosDias) +
-        pontuarResposta('exercicios-duracao', exerciciosDuracao) +
-        pontuarResposta('dormir', dormir) +
-        pontuarResposta('atividade', atividade) +
-        pontuarResposta('frutas', frutas) +
-        pontuarResposta('gordura', gordura) +
-        pontuarResposta('fumar', fumar);
+    // Pontuações individuais
+    const pontuacoesIndividuais = {
+        agua: pontuarResposta('agua', agua),
+        exerciciosDias: pontuarResposta('exercicios-dias', exerciciosDias),
+        exerciciosDuracao: pontuarResposta('exercicios-duracao', exerciciosDuracao),
+        dormir: pontuarResposta('dormir', dormir),
+        atividade: pontuarResposta('atividade', atividade),
+        frutas: pontuarResposta('frutas', frutas),
+        gordura: pontuarResposta('gordura', gordura),
+        fumar: pontuarResposta('fumar', fumar)
+    };
+
+    const pontuacaoTotal = Object.values(pontuacoesIndividuais).reduce((acc, val) => acc + val, 0);
 
     // Salva no localStorage
     localStorage.setItem('pontuacaoTotal', pontuacaoTotal);
-
-    // Salva também as respostas
+    localStorage.setItem('pontuacoesIndividuais', JSON.stringify(pontuacoesIndividuais));
     localStorage.setItem('respostasHabitos', JSON.stringify({
         agua,
         exerciciosDias,
@@ -196,6 +190,5 @@ document.querySelector('form[name="frmHealth"]').addEventListener('submit', func
         fumar
     }));
 
-    // Redireciona para a página do gráfico
     window.location.href = "grafico.html";
 });
