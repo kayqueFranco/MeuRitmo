@@ -1,29 +1,40 @@
-import { rejects } from "assert";
-import Resposta from "../classes/Resposta";
-import Usuario from "../classes/Usuario";
+import { resolve } from "path";
+import usuario from "../classes/Usuario";
 import { conexao } from "../database/Config";
 import Commands from "../interfaces/commands";
-import CommandsUsuaro from "../interfaces/CommandsUsuario";
 
-
-export default class UsuarioRepository implements CommandsUsuaro<Usuario>{
-    login(usuario: string, senha: string) {
-        throw new Error("Method not implemented.");
+export default class usuarioRepository implements Commands<usuario>{
+    Cadastrar(obj: usuario): Promise<usuario> {
+        return new Promise((resolve,reject)=>{
+            conexao.query("INSERT INTO usuario(nome,idade,peso,objetivo,altura,sexo) values(?,?,?,?,?,?)",
+                [
+                    obj.nome,
+                    obj.idade,
+                    obj.peso,
+                    obj.objetivo,
+                    obj.altura,
+                    obj.sexo
+                ],
+                (erro, end:any)=>{
+                    if(erro){
+                    return reject(erro);
+                    
+                    }
+                    else{
+                        return resolve(obj)
+                    }
+                }
+            )
+        })
     }
-    loginUCE(usuario: string, emiail: string, senha: string) {
-        throw new Error("Method not implemented.");
-    }
-    Cadastrar(obj: Usuario): Promise<Usuario> {
-        throw new Error("Method not implemented.");
-    }
-    Listar(): Promise<Usuario[]> {
-        return new Promise ((resolve, reject)=>{
+    Listar(): Promise<usuario[]> {
+        return new Promise((resolve,reject)=>{
             conexao.query("Select * from usuario", (erro, result)=>{
                 if(erro){
                     return reject(erro)
                 }
-                else {
-                    return resolve (result as Usuario[])
+                else{
+                    return resolve (result as usuario[])
                 }
             })
         })
@@ -31,11 +42,11 @@ export default class UsuarioRepository implements CommandsUsuaro<Usuario>{
     Apagar(id: number): Promise<String> {
         throw new Error("Method not implemented.");
     }
-    Atualizar(obj: Usuario): Promise<Usuario> {
+    Atualizar(obj: usuario): Promise<usuario> {
         throw new Error("Method not implemented.");
     }
-    PesquisarId(id: number): Promise<Usuario> {
+    PesquisarId(id: number): Promise<usuario> {
         throw new Error("Method not implemented.");
     }
-
+    
 }

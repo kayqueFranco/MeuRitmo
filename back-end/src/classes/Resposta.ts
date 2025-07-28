@@ -1,8 +1,8 @@
-import Usuario from "./Usuario";
+import usuario from "./Usuario";
 
 export default class Resposta{
     id!:number;
-    usuario!:Usuario;
+    usuario!:usuario;
     agua!:string;
     exercicio_semanal!:string;
     tempo_treino!:string;

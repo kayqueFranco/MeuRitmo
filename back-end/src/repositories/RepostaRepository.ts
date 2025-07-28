@@ -25,7 +25,7 @@ export default class RespostaRepository implements Commands<Resposta>{
                             return reject(erro);
                         }
                         else{
-                            return resolve(result);
+                            return resolve(obj);
                         }
                     }
             )
