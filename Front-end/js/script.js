@@ -1,7 +1,6 @@
 let menuIcon = document.querySelector('#menu-icon');
 let ul = document.querySelector('.nav-list');
 let ip = "http://10.26.45.42:5000/api/v1";
-let usuario = "http://10.26.45.42:5000/api/v1/usuario/cadastrar"
 
 menuIcon.addEventListener('click', () => {
   if (ul.classList.contains('ativo')) {
@@ -16,6 +15,16 @@ menuIcon.addEventListener('click', () => {
 //-- Pegando dados do HTML 
 
 function coletarDados(event) {
+  event.preventDefault(); // Impede o reload da página
+
+  const nome = document.getElementById("txtNome").value;
+  const idade = parseInt(document.getElementById("txtIdade").value);
+  const peso = parseFloat(document.getElementById("txtPeso").value);
+  const altura = parseFloat(document.getElementById("txtAltura").value);
+  const objetivo = document.getElementById("atividade").value;
+  const sexoElement = document.querySelector('input[name="grupo"]:checked');
+  const sexo = sexoElement ? sexoElement.value : "";
+
   fetch("http://10.26.45.42:5000/api/v1/usuario/cadastrar", {
     method: "POST",
     headers: {
@@ -38,10 +47,9 @@ function coletarDados(event) {
       console.log("Usuário cadastrado:", resposta);
       window.location.href = "perguntas.html";
     })
-    .catch((err) => console.error(err));
-
-  // Redireciona para a próxima página
-  window.location.href = "perguntas.html";
+    .catch((err) => {
+      console.error("Erro:", err);
+    });
 }
 
 function pegarSexoSelecionado() {
@@ -85,7 +93,7 @@ if (formHabitos) {
       const tabela = {
         perder_peso: {
           agua: {
-            "Menos de 1 litro": 0,
+            "Menos de 1 litro": 5,
             "1 - 2 litros": 10,
             "2 - 3 litros": 15,
             "Mais 3 litros": 20
@@ -249,6 +257,3 @@ if (formHabitos) {
     window.location.href = "grafico.html";
   });
 }
-
-
-
