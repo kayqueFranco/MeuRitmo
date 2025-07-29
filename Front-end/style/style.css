@@ -73,6 +73,7 @@ header {
     gap: 40px;
     text-align: center;
     z-index: 20;
+    margin-right: 40px;
 }
 
 .nav-list li {
