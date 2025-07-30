@@ -50,6 +50,8 @@ function coletarDados(event) {
     .catch((err) => {
       console.error("Erro:", err);
     });
+
+    window.location.href = "perguntas.html";
 }
 
 function pegarSexoSelecionado() {
