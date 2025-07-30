@@ -98,6 +98,20 @@ header {
 
 /* Fim do cabeçalho */
 
+/* ---------- Inicio da animação de scroll ---------- */
+.hidden {
+    opacity: 0;
+    transform: translateY(-25px);
+    transition: all 1.5s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- FIM da animação de scroll ---------- */
+
 /* ---------- Inicio do footer ---------- */
 
 footer {

@@ -50,6 +50,8 @@ function coletarDados(event) {
     .catch((err) => {
       console.error("Erro:", err);
     });
+
+  window.location.href = "perguntas.html";
 }
 
 function pegarSexoSelecionado() {
@@ -62,6 +64,8 @@ function pegarSexoSelecionado() {
     console.log("Nenhum sexo selecionado");
     return null;
   }
+
+
 }
 
 // -------------------
@@ -257,3 +261,18 @@ if (formHabitos) {
     window.location.href = "grafico.html";
   });
 }
+
+// Efeito scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+      console.log(entry);
+      if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+      } else {
+          entry.target.classList.remove('show');
+      }
+  });
+})
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
