@@ -265,13 +265,13 @@ if (formHabitos) {
 // Efeito scroll animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry);
-      if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-          observer.unobserve(entry.target);
-      } else {
-          entry.target.classList.remove('show');
-      }
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    } else {
+      entry.target.classList.remove('show');
+    }
   });
 })
 const hiddenElements = document.querySelectorAll('.hidden');
