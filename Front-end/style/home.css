@@ -327,13 +327,13 @@ a {
         display: block;
         position: absolute;
         right: 0px;
-        top: 70px;
+        top: -30px;
     }
 
     #ladoEsq {
         position: absolute;
         left: 90px;
-        top: 230px;
+        top: 150px;
     }
 
     #shape {
