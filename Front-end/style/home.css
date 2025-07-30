@@ -194,6 +194,15 @@ a {
         flex-direction: row;
     }
 
+    .containerCards .cards{
+        cursor: pointer;
+        transition: 0.4s ease;
+    }
+
+    .containerCards .cards:hover {
+        transform: translateY(-8px);
+    }
+
     #cards-dicas h2 {
         margin-bottom: 35px;
         letter-spacing: 2px;
