@@ -19,6 +19,11 @@ app.post("/api/v1/resposta/cadastro",(req,res)=>{
     resp.cadastrarResposta(req,res)
 })
 
+app.post("/api/v1/resposta/preferencias",(req,res)=>{
+    resp.cadastrarPreferencias(req,res)
+})
+
+
 //-------------------- USUARIO ------------------------
 
 app.get("/api/v1/usuario/listar", (req,res)=>{

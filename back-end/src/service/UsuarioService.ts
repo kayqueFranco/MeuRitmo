@@ -1,5 +1,5 @@
 import usuario from "../classes/Usuario";
-import usuarioRepository from "../repositories/UsuarioRepository";
+import usuarioRepository from "../repositories/usuarioRepository"
 import { Request, Response } from "express";
 
 
@@ -14,7 +14,7 @@ export default class usuarioService{
         usu.peso = req.body.peso;
         usu.objetivo = req.body.objetivo;
         usu.altura = req.body.altura;
-        usu.sexo = req.body.altura;
+        usu.sexo = req.body.sexo;
 
         try {
             const rs = await this.usuRepository.Cadastrar(usu)

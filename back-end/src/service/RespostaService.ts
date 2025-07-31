@@ -39,4 +39,27 @@ export default class RespostaService{
             return res.status(500).json(erro)
         }
     }
+
+    async cadastrarPreferencias(req:Request,res:Response){
+        let obj = {
+            sexo: req.body.sexo,
+            objetivo: req.body.objetivo,
+            peso: req.body.peso,
+            usuario:req.body.usuario,
+            agua:req.body.agua,
+            exercico_semanal:req.body.exercicio_semanal,
+            tempo_treino:req.body.tempo_treino,
+            sono:req.body.sono,
+            frutas_vegetais:req.body.frutas_vegetais,
+            frituras_doces:req.body.frituras_doces,
+            fuma_bebe:req.body.fuma_bebe
+        }
+        try {
+            const rs = await this.resRepository.CadastrarPreferencias(obj.sexo,obj.objetivo,obj.peso,obj.usuario,obj.agua,obj.exercico_semanal,obj.tempo_treino,obj.sono,obj.frutas_vegetais,obj.frituras_doces,obj.fuma_bebe)
+            console.log(rs)
+            return res.status(200).json(rs)
+        } catch (erro) {
+            return res.status(200).json(erro)
+        }
+    }
 }
