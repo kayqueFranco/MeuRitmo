@@ -22,7 +22,8 @@ function coletarDados(event) {
   const peso = parseFloat(document.getElementById("txtPeso").value);
   const altura = parseFloat(document.getElementById("txtAltura").value);
   const objetivo = document.getElementById("atividade").value;
-  pegarSexoSelecionado();
+  const sexoElement = document.querySelector('input[name="grupo"]:checked');
+  const sexo = sexoElement ? sexoElement.value : "";
 
   fetch("http://10.26.45.42:5000/api/v1/usuario/cadastrar", {
     method: "POST",
