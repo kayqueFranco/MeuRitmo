@@ -51,6 +51,14 @@
     #container {
         max-width: 800px;
     }
+
+    li .icone-lista i {
+        transition: 0.4s ease;
+    }
+
+    li .icone-lista i:hover{
+        transform: translateY(-5px);
+    }
 }
 
 @media (min-width: 1200px){

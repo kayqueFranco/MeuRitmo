@@ -45,7 +45,6 @@ function coletarDados(event) {
     })
     .then((resposta) => {
       console.log("Usuário cadastrado:", resposta);
-      window.location.href = "perguntas.html";
     })
     .catch((err) => {
       console.error("Erro:", err);
