@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+#container {
+    max-width: 300px;
+    margin: 70px auto;
+}
+
+#container section {
+    margin: 70px 0px;
+}
+
+#container section h1 {
+    margin: 20px 0px;
+}
+
+#container section p {
+    font-size: 1.1em;
+}
+
+@media (min-width: 1200px){
+    #container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+} 
