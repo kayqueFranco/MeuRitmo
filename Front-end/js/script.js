@@ -64,7 +64,6 @@ function pegarSexoSelecionado() {
     return null;
   }
 
-
 }
 
 // -------------------
