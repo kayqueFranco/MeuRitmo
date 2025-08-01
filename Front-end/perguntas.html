@@ -42,27 +42,27 @@
 
         <div class="formulario">
             <!-- Inicio entrada de dados -->
-            <form name="frmHealth">
+            <form name="frmHealth" onsubmit="return false">
                 <div id="div-agua" class="card-perguntas">
                     <label for="nome">Quanto de <span class="span-roxo">água</span> você costuma beber por dia?</label>
-                    <p><input required type="radio" name="agua" value="Menos de 1 litro">Menos de 1 litro</p>
-                    <p><input type="radio" name="agua" value="2">1 - 2 litros</p>
-                    <p><input type="radio" name="agua" value="3">2 - 3 litros</p>
-                    <p><input type="radio" name="agua" value="4">Mais 3 litros</p>
+                    <p><input required type="radio" name="agua" value="1">Menos de 1 litro</p>
+                    <p><input type="radio" id="2litros" name="agua" value="2">1 - 2 litros</p>
+                    <p><input type="radio" id="3litros" name="agua" value="3">2 - 3 litros</p>
+                    <p><input type="radio" id="4litros" name="agua" value="4">Mais 3 litros</p>
                 </div>
 
                 <div id="div-exercicios" class="card-perguntas">
                     <label for="nome">Quantos dias por semana você faz <span class="span-roxo">exercícios</span> físicos?</label>
-                    <p><input required type="radio" name="exercicios-dias" value="2">1 - 2 dias</p>
-                    <p><input type="radio" name="exercicios-dias" value="5">3 - 5 dias</p>
-                    <p><input type="radio" name="exercicios-dias" value="7">5 - 7 dias</p>
+                    <p><input required type="radio" id="2dias" name="exercicios-dias" value="2">1 - 2 dias</p>
+                    <p><input type="radio" id="5dias" name="exercicios-dias" value="5">3 - 5 dias</p>
+                    <p><input type="radio" id="7dias" name="exercicios-dias" value="7">5 - 7 dias</p>
                 </div>
 
                 <div id="div-tempo-exercicios" class="card-perguntas">
                     <label for="nome">Quanto tempo dura, em média, cada <span class="span-roxo">treino</span>?</label>
-                    <p><input type="radio" name="exercicios-duracao" value="60">30 a 60 minutos</p>
-                    <p><input type="radio" name="exercicios-duracao" value="90">1 hora á 1h30</p>
-                    <p><input required type="radio" name="exercicios-duracao" value="120">Mais de 2h</p>
+                    <p><input type="radio" id="60min" name="exercicios-duracao" value="60">30 a 60 minutos</p>
+                    <p><input type="radio" id="90min" name="exercicios-duracao" value="90">1 hora á 1h30</p>
+                    <p><input required type="radio" id="120min" name="exercicios-duracao" value="120">Mais de 2h</p>
                 </div>
 
                 <div id="div-dormir" class="card-perguntas">
@@ -102,7 +102,7 @@
                 </div>
 
                 <div id="button">
-                    <button type="submit">Ver o gráfico</button>
+                    <button id="button" onclick="coletarPerguntas()">Ver gráfico</button>
                 </div>
             </form>
             <!-- Fim entrada de dados -->
