@@ -21,7 +21,7 @@ export default class usuarioRepository implements Commands<usuario>{
                     
                     }
                     else{
-                        return resolve(obj)
+                        return resolve(end)
                     }
                 }
             )
