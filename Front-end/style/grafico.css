@@ -1,7 +1,20 @@
 @charset "UTF-8";
 
-#dicas {
-    max-width: 1000px;
+#div-grafico {
+    margin: 20px auto;
+    max-width: 360px;
+    height: 200px;
+}
+
+#dicas, #dados-usuario {
+    max-width: 350px;
     margin: 20px auto;
     font-size: 18px;
+    padding: 40px;
+    box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+    border-radius: 15px;
+}
+
+@media (min-width: 576px){
+    
 }

@@ -45,6 +45,8 @@ function coletarDados(event) {
         .then((resposta) => {
             console.log("Usuário cadastrado:", resposta.insertId);
             localStorage.setItem("id_usuario", resposta.insertId);
+            localStorage.setItem("nome", nome);
+            localStorage.setItem("idade", idade);
             localStorage.setItem("sexo", sexo);
             localStorage.setItem("peso", peso);
             localStorage.setItem("objetivo", objetivo);
