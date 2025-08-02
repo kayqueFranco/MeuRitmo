@@ -7,7 +7,7 @@
     <meta name="description" content="Monitore sua saúde diária com gráficos e dicas para melhorar o seu desempenho!">
     <title>MeuRitmo</title>
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/grafico.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -42,6 +42,9 @@
         <div style="width: 1000px; height: 600px;">
             <canvas id="grafico"></canvas>
         </div>
+
+        <div id="dicas"></div>
+
     </main>
     <!--Fim do main-->
 
@@ -96,6 +99,16 @@
             .then(res => {
                 console.log("Resposta recebida:", res);
 
+                const dicasEl = document.getElementById("dicas");
+
+                function gerarDica(titulo, valor, idealMin, idealMax, dicaBoa, dicaRuim) {
+                    if (valor >= idealMin && valor <= idealMax) {
+                        return `<p style="color: green;"><strong>${titulo}:</strong> ${dicaBoa}</p>`;
+                    } else {
+                        return `<p style="color: red;"><strong>${titulo}:</strong> ${dicaRuim}</p>`;
+                    }
+                }
+
                 if (Array.isArray(res)) {
                     valores[0] = res[0]; // Água
                     valores[1] = res[1]; // Tempo de treino
@@ -103,6 +116,14 @@
                     valores[3] = res[2]; // Sono
 
                     grafico.update();
+
+                    let dicasHTML = "";
+                    dicasHTML += gerarDica("Consumo de água", res[0], 60, 100, "Você está se hidratando bem!", "Tente beber mais água durante o dia.");
+                    dicasHTML += gerarDica("Tempo de treino diário", res[1], 50, 100, "Ótimo tempo de treino diário!", "Considere aumentar o tempo dos treinos.");
+                    dicasHTML += gerarDica("Exercícios por semana", res[3], 60, 100, "Sua frequência de exercícios está excelente!", "Tente se exercitar mais vezes por semana.");
+                    dicasHTML += gerarDica("Horas de sono", res[2], 70, 100, "Você está dormindo bem!", "Tente melhorar sua rotina de sono.");
+
+                    dicasEl.innerHTML = dicasHTML;
                 } else {
                     console.warn("Resposta não é um array esperado:", res);
                 }
