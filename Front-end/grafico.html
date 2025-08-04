@@ -153,10 +153,11 @@
                     // Dicas de receitas por objetivo
                     const receitasPorObjetivo = {
                         "perder": [
-                            { refeicao: "Café da manhã", dica: "Omelete com espinafre e tomate + chá verde." },
-                            { refeicao: "Almoço", dica: "Frango grelhado com legumes no vapor e arroz integral." },
-                            { refeicao: "Lanche", dica: "Omelete com espinafre e tomate + chá verde." },
-                            { refeicao: "Jantar", dica: "Sopa de legumes com quinoa e folhas verdes." }
+                            {
+                                refeicao: "Café da manhã", dica: "Frutas: 1 fatia de mamão </br> Cereais: 2 colheres de sopa de aveia </br> Pão: 1 fatia de pão integral </br> Ovos: 1 ovo cozido ou mexido sem óleo </br> Beber:1 xícara de café sem açúcar pode adoçar com canela ou adoçante." },
+                            { refeicao: "Almoço", dica: "Salada: alface, tomate e cenoura ralada </br> Vegetais: abobrinha e chuchu cozidos </br> Verduras: espinafre refogado </br> Arroz integral: Possui teor de fibras e nutrientes essenciais </br> Fonte de proteína: 1 filé grelhado de frango" },
+                            { refeicao: "Lanche", dica: "1 pote de iogurte natural + 1 colher de sopa de aveia." },
+                            { refeicao: "Jantar", dica: "Fonte de proteína: omelete de 2 ovos com frango desfiado </br> Vegetais: legumes refogados </br> Arroz integral: O mais recomendado para o emagrecimento" }
                         ],
                         "manter peso": [
                             { refeicao: "Café da manhã", dica: "Iogurte natural com frutas e granola sem açúcar." },
@@ -164,7 +165,7 @@
                             { refeicao: "Lanche", dica: "Omelete com espinafre e tomate + chá verde." },
                             { refeicao: "Lanche", dica: "Pão integral com pasta de atum." }
                         ],
-                        "ganhar massa": [
+                        "ganhar": [
                             { refeicao: "Café da manhã", dica: "Vitamina de banana com aveia, leite e pasta de amendoim." },
                             { refeicao: "Almoço", dica: "Arroz, feijão, carne vermelha magra, ovos cozidos e salada." },
                             { refeicao: "Lanche", dica: "Omelete com espinafre e tomate + chá verde." },
@@ -175,7 +176,7 @@
                     const receitas = receitasPorObjetivo[objetivo.toLowerCase()];
                     const receitasEl = document.getElementById("receitas");
 
-                    let receitasHTML = "<h3 style='margin: 20px 0px 0px 5px;'>Sugestões de receitas:</h3>";
+                    let receitasHTML = "<h3 style='margin: 20px 0px 0px 5px;'> Sugestões de receitas:</h3>";
 
                     if (receitas) {
                         receitas.forEach(r => {
