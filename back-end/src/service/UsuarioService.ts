@@ -1,5 +1,5 @@
 import usuario from "../classes/Usuario";
-import usuarioRepository from "../repositories/usuarioRepository"
+import usuarioRepository from "../repositories/UsuarioRepository"
 import { Request, Response } from "express";
 
 
