@@ -175,11 +175,11 @@
                     const receitas = receitasPorObjetivo[objetivo.toLowerCase()];
                     const receitasEl = document.getElementById("receitas");
 
-                    let receitasHTML = "<h3 style='margin-top: 20px; margin-bottom: 10px;'>Sugestões de receitas:</h3>";
+                    let receitasHTML = "<h3 style='margin: 20px 0px 0px 5px;'>Sugestões de receitas:</h3>";
 
                     if (receitas) {
                         receitas.forEach(r => {
-                            receitasHTML += `<p><strong>${r.refeicao}:</strong> ${r.dica}</p>`;
+                            receitasHTML += `<p style='margin: 20px 0px;'><strong>${r.refeicao}:</strong> </br> ${r.dica}</p>`;
                         });
                     } else {
                         receitasHTML += "<p>Objetivo não reconhecido para sugestões de receita.</p>";
