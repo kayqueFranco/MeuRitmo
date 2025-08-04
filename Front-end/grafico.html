@@ -47,6 +47,7 @@
 
         <div id="dicas"></div>
 
+        <div id="receitas"></div>
     </main>
     <!--Fim do main-->
 
@@ -64,7 +65,10 @@
                 datasets: [{
                     label: '# of Votes',
                     data: valores,
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: [
+                        '#3e2b8b'
+                    ]
                 }]
             },
             options: {
@@ -143,6 +147,45 @@
                     dicasHTML += gerarDica("Horas de sono", res[2], 70, 100, "Você está dormindo bem!", "Tente melhorar sua rotina de sono.");
 
                     dicasEl.innerHTML = dicasHTML;
+
+                    const obj = localStorage.getItem(objetivo)
+
+                    // Dicas de receitas por objetivo
+                    const receitasPorObjetivo = {
+                        "perder": [
+                            { refeicao: "Café da manhã", dica: "Omelete com espinafre e tomate + chá verde." },
+                            { refeicao: "Almoço", dica: "Frango grelhado com legumes no vapor e arroz integral." },
+                            { refeicao: "Lanche", dica: "Omelete com espinafre e tomate + chá verde." },
+                            { refeicao: "Jantar", dica: "Sopa de legumes com quinoa e folhas verdes." }
+                        ],
+                        "manter peso": [
+                            { refeicao: "Café da manhã", dica: "Iogurte natural com frutas e granola sem açúcar." },
+                            { refeicao: "Almoço", dica: "Peixe assado com batata doce e salada colorida." },
+                            { refeicao: "Lanche", dica: "Omelete com espinafre e tomate + chá verde." },
+                            { refeicao: "Lanche", dica: "Pão integral com pasta de atum." }
+                        ],
+                        "ganhar massa": [
+                            { refeicao: "Café da manhã", dica: "Vitamina de banana com aveia, leite e pasta de amendoim." },
+                            { refeicao: "Almoço", dica: "Arroz, feijão, carne vermelha magra, ovos cozidos e salada." },
+                            { refeicao: "Lanche", dica: "Omelete com espinafre e tomate + chá verde." },
+                            { refeicao: "Jantar", dica: "Macarrão integral com frango desfiado e molho de tomate caseiro." }
+                        ]
+                    };
+
+                    const receitas = receitasPorObjetivo[objetivo.toLowerCase()];
+                    const receitasEl = document.getElementById("receitas");
+
+                    let receitasHTML = "<h3 style='margin-top: 20px; margin-bottom: 10px;'>Sugestões de receitas:</h3>";
+
+                    if (receitas) {
+                        receitas.forEach(r => {
+                            receitasHTML += `<p><strong>${r.refeicao}:</strong> ${r.dica}</p>`;
+                        });
+                    } else {
+                        receitasHTML += "<p>Objetivo não reconhecido para sugestões de receita.</p>";
+                    }
+
+                    receitasEl.innerHTML = receitasHTML;
 
                 } else {
                     console.warn("Resposta não é um array esperado ou está incompleta:", res);

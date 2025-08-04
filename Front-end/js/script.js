@@ -98,15 +98,17 @@ function coletarPerguntas() {
         return;
     }
 
+    alert(agua.value);
+
     fetch("http://10.26.45.42:5000/api/v1/resposta/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             id_usuario: parseInt(id_usuario),
-            agua: agua.value,
-            exercicio_semanal: exercicio_semanal.value,
-            tempo_treino: tempo_treino.value,
-            sono: sono.value,
+            agua: parseInt(agua.value),
+            exercicio_semanal: parseInt(exercicio_semanal.value),
+            tempo_treino: parseInt(tempo_treino.value),
+            sono: parseInt(sono.value),
             atividade_diaria: atividade_diaria.value,
             frutas_vegetais: frutas_vegetais.value,
             doces_fritura: doces_fritura.value,
