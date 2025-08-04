@@ -12,6 +12,8 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -37,12 +39,81 @@
 
     <!--Inicio do main-->
     <main>
-        
+        <div style="width: 1000px; height: 600px;">
+            <canvas id="grafico"></canvas>
+        </div>
     </main>
     <!--Fim do main-->
 
+    <script>
+        //Gráfico
+        const ctx = document.getElementById('grafico');
 
-   <!-- Inicio do footer -->
+        let labelsX = ["Água", "Tempo de treino", "Exercício semanal", "Horas de sono"]
+        let valores = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+        let grafico = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labelsX,
+                datasets: [{
+                    label: '# of Votes',
+                    data: valores,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        const id_usuario = parseInt(localStorage.getItem("id_usuario"));
+        const sexo = localStorage.getItem("sexo");
+        const peso = parseFloat(localStorage.getItem("peso"));
+        const objetivo = localStorage.getItem("objetivo");
+        console.log(objetivo)
+        console.log(id_usuario)
+        console.log(sexo)
+        console.log(peso)
+
+        fetch(`http://10.26.45.42:5000/api/v1/resposta/preferencias`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                sexo: sexo,
+                objetivo: objetivo,
+                peso: peso,
+                usuario: id_usuario
+            })
+        })
+            .then(res => res.json())
+            .then(res => {
+                console.log("Resposta recebida:", res);
+
+                if (Array.isArray(res)) {
+                    valores[0] = res[0]; // Água
+                    valores[1] = res[1]; // Tempo de treino
+                    valores[2] = res[3]; // Exercício semanal
+                    valores[3] = res[2]; // Sono
+
+                    grafico.update();
+                } else {
+                    console.warn("Resposta não é um array esperado:", res);
+                }
+            })
+            .catch(erro => {
+                console.log("ERRO: " + erro);
+            });
+    </script>
+
+
+    <!-- Inicio do footer -->
     <footer>
         <img src="/Front-end/img/wave.svg" alt="imagem do footer">
 

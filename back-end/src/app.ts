@@ -1,7 +1,7 @@
 import  express from "express"
 import cors from "cors"
 import RespostaService from "./service/RespostaService";
-import usuarioService from "./service/usuarioService";
+import usuarioService from "./service/UsuarioService";
 
 
 const app = express();
