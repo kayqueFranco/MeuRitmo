@@ -16,7 +16,7 @@ export default class RespostaService{
         resp.frutas_vegetais = req.body.frutas_vegetais;
         resp.doces_fritura = req.body.doces_fritura;
         resp.fuma_bebe = req.body.fuma_bebe;
-        resp.pontacao = req.body.pontacao;
+        resp.pontuacao = req.body.pontuacao;
        
         try {
             const rs = await this.resRepository.Cadastrar(resp)

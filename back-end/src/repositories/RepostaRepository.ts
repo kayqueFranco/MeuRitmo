@@ -18,7 +18,7 @@ export default class RespostaRepository implements Commands<Resposta> {
                     obj.frutas_vegetais,
                     obj.doces_fritura,
                     obj.fuma_bebe,
-                    obj.pontacao
+                    obj.pontuacao
                 ],
                 (erro, result: any) => {
                     if (erro) {

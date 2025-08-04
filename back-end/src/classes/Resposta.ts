@@ -11,5 +11,5 @@ export default class Resposta{
     frutas_vegetais!:string;
     doces_fritura!:string;
     fuma_bebe!:string;
-    pontacao!:number;
+    pontuacao!:number;
 }
