@@ -77,6 +77,7 @@ export default class RespostaRepository implements Commands<Resposta> {
         console.log(agua)
 
 
+
         return new Promise((resolve, reject) => {
     
             if (peso <= 50)
@@ -116,53 +117,39 @@ export default class RespostaRepository implements Commands<Resposta> {
                                 if (parseInt(dados_resposta[0].peso) <= parseInt(retorno_recomendado[0].peso)) {
                                     peso_grafico = 100;
                                 }
-                    
-                                agua_grafico = dados_resposta[0].agua && retorno_recomendado[0].agua
-                                    ? (parseFloat(dados_resposta[0].agua) / parseFloat(retorno_recomendado[0].agua)) * 100
-                                    : 0;
-                    
+                                agua_grafico = (parseFloat(dados_resposta[0].agua) / parseFloat(retorno_recomendado[0].agua)) * 100;
                                 exercicio_semanal_grafico = (parseFloat(dados_resposta[0].exercicio_semanal) / parseFloat(retorno_recomendado[0].exercicio_semanal)) * 100;
                                 tempo_treino_grafico = (parseFloat(dados_resposta[0].tempo_treino) / parseFloat(retorno_recomendado[0].tempo_treino)) * 100;
                                 sono_grafico = (parseFloat(dados_resposta[0].sono) / parseFloat(retorno_recomendado[0].sono)) * 100;
                                 frutas_vegetais_grafico = retorno_recomendado[0].frutas_vegetais;
                                 frituras_doces_grafico = retorno_recomendado[0].fritura_doces;
                                 fuma_bebe_grafico = retorno_recomendado[0].fuma_bebe;
-                    
-                            } else if (dados_resposta[0].objetivo == "perder") {
-                                if (dados_resposta[0].agua && retorno_recomendado[0].agua) {
-                                    if (parseFloat(dados_resposta[0].agua) >= parseFloat(retorno_recomendado[0].agua)) {
-                                        agua_grafico = 100;
-                                    } else {
-                                        agua_grafico = (parseFloat(dados_resposta[0].agua) / parseFloat(retorno_recomendado[0].agua)) * 100;
-                                    }
+                            }
+                            else if (dados_resposta[0].objetivo == "perder") {
+                                if (dados_resposta[0].agua >= retorno_recomendado[0].agua) {
+                                    agua_grafico = 100;
                                 } else {
-                                    agua_grafico = 0;
+                                    agua_grafico = (parseFloat(dados_resposta[0].agua) / parseFloat(retorno_recomendado[0].agua)) * 100;
+                                    exercicio_semanal_grafico = (parseFloat(dados_resposta[0].exercicio_semanal) / parseFloat(retorno_recomendado[0].exercicio_semanal)) * 100;
+                                    tempo_treino_grafico = (parseFloat(dados_resposta[0].tempo_treino) / parseFloat(retorno_recomendado[0].tempo_treino)) * 100;
+                                    sono_grafico = (parseFloat(dados_resposta[0].sono) / parseFloat(retorno_recomendado[0].sono)) * 100;
+                                    frutas_vegetais_grafico = retorno_recomendado[0].frutas_vegetais;
+                                    frituras_doces_grafico = retorno_recomendado[0].fritura_doces;
+                                    fuma_bebe_grafico = retorno_recomendado[0].fuma_bebe;
                                 }
-                    
-                                exercicio_semanal_grafico = (parseFloat(dados_resposta[0].exercicio_semanal) / parseFloat(retorno_recomendado[0].exercicio_semanal)) * 100;
-                                tempo_treino_grafico = (parseFloat(dados_resposta[0].tempo_treino) / parseFloat(retorno_recomendado[0].tempo_treino)) * 100;
-                                sono_grafico = (parseFloat(dados_resposta[0].sono) / parseFloat(retorno_recomendado[0].sono)) * 100;
-                                frutas_vegetais_grafico = retorno_recomendado[0].frutas_vegetais;
-                                frituras_doces_grafico = retorno_recomendado[0].fritura_doces;
-                                fuma_bebe_grafico = retorno_recomendado[0].fuma_bebe;
-                    
-                            } else if (dados_resposta[0].objetivo == "manter") {
-                                if (dados_resposta[0].agua && retorno_recomendado[0].agua) {
-                                    if (parseFloat(dados_resposta[0].agua) == parseFloat(retorno_recomendado[0].agua)) {
-                                        agua_grafico = 100;
-                                    } else {
-                                        agua_grafico = (parseFloat(dados_resposta[0].agua) / parseFloat(retorno_recomendado[0].agua)) * 100;
-                                    }
+                            }
+                            else if (dados_resposta[0].objetivo == "manter") {
+                                if (dados_resposta[0].agua == retorno_recomendado[0].agua) {
+                                    agua_grafico = 100;
                                 } else {
-                                    agua_grafico = 0;
+                                    agua_grafico = (parseFloat(dados_resposta[0].agua) / parseFloat(retorno_recomendado[0].agua)) * 100;
+                                    exercicio_semanal_grafico = (parseFloat(dados_resposta[0].exercicio_semanal) / parseFloat(retorno_recomendado[0].exercicio_semanal)) * 100;
+                                    tempo_treino_grafico = (parseFloat(dados_resposta[0].tempo_treino) / parseFloat(retorno_recomendado[0].tempo_treino)) * 100;
+                                    sono_grafico = (parseFloat(dados_resposta[0].sono) / parseFloat(retorno_recomendado[0].sono)) * 100;
+                                    frutas_vegetais_grafico = retorno_recomendado[0].frutas_vegetais;
+                                    frituras_doces_grafico = retorno_recomendado[0].fritura_doces;
+                                    fuma_bebe_grafico = retorno_recomendado[0].fuma_bebe;
                                 }
-                    
-                                exercicio_semanal_grafico = (parseFloat(dados_resposta[0].exercicio_semanal) / parseFloat(retorno_recomendado[0].exercicio_semanal)) * 100;
-                                tempo_treino_grafico = (parseFloat(dados_resposta[0].tempo_treino) / parseFloat(retorno_recomendado[0].tempo_treino)) * 100;
-                                sono_grafico = (parseFloat(dados_resposta[0].sono) / parseFloat(retorno_recomendado[0].sono)) * 100;
-                                frutas_vegetais_grafico = retorno_recomendado[0].frutas_vegetais;
-                                frituras_doces_grafico = retorno_recomendado[0].fritura_doces;
-                                fuma_bebe_grafico = retorno_recomendado[0].fuma_bebe;
                             }
     
                             dados_grafico.push(agua_grafico);
