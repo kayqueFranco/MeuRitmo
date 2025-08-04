@@ -118,47 +118,40 @@
             .then(res => {
                 console.log("Resposta recebida:", res);
 
-                if (Array.isArray(res)) {
+                if (Array.isArray(res) && res.length >= 4) {
                     valores[0] = res[0]; // Água
                     valores[1] = res[1]; // Tempo de treino
                     valores[2] = res[3]; // Exercício semanal
                     valores[3] = res[2]; // Sono
 
                     grafico.update();
+
+                    const dicasEl = document.getElementById("dicas");
+
+                    function gerarDica(titulo, valor, idealMin, idealMax, dicaBoa, dicaRuim) {
+                        if (valor >= idealMin && valor <= idealMax) {
+                            return `<p style="color: green; margin-top: 20px;"><strong>${titulo}:</strong> ${dicaBoa}</p>`;
+                        } else {
+                            return `<p style="color: red;  margin-top: 20px;"><strong>${titulo}:</strong> ${dicaRuim}</p>`;
+                        }
+                    }
+
+                    let dicasHTML = "";
+                    dicasHTML += gerarDica("Consumo de água", res[0], 60, 100, "Você está se hidratando bem!", "Tente beber mais água durante o dia.");
+                    dicasHTML += gerarDica("Tempo de treino diário", res[1], 50, 100, "Ótimo tempo de treino diário!", "Considere aumentar o tempo dos treinos.");
+                    dicasHTML += gerarDica("Exercícios por semana", res[3], 60, 100, "Sua frequência de exercícios está excelente!", "Tente se exercitar mais vezes por semana.");
+                    dicasHTML += gerarDica("Horas de sono", res[2], 70, 100, "Você está dormindo bem!", "Tente melhorar sua rotina de sono.");
+
+                    dicasEl.innerHTML = dicasHTML;
+
                 } else {
-                    console.warn("Resposta não é um array esperado:", res);
+                    console.warn("Resposta não é um array esperado ou está incompleta:", res);
                 }
             })
             .catch(erro => {
                 console.log("ERRO: " + erro);
 
-                // Simular dados de exemplo
-                const res = [10, 20, 30, 40]; // água, treino, sono, exercícios semanais
 
-                const dicasEl = document.getElementById("dicas");
-
-                function gerarDica(titulo, valor, idealMin, idealMax, dicaBoa, dicaRuim) {
-                    if (valor >= idealMin && valor <= idealMax) {
-                        return `<p style="color: green; margin-top: 20px;"><strong>${titulo}:</strong> ${dicaBoa}</p>`;
-                    } else {
-                        return `<p style="color: #000;  margin-top: 20px;"><strong>${titulo}:</strong> ${dicaRuim}</p>`;
-                    }
-                }
-
-                valores[0] = res[0];
-                valores[1] = res[1];
-                valores[2] = res[3];
-                valores[3] = res[2];
-
-                grafico.update();
-
-                let dicasHTML = "";
-                dicasHTML += gerarDica("Consumo de água", res[0], 60, 100, "Você está se hidratando bem!", "Tente beber mais água durante o dia.");
-                dicasHTML += gerarDica("Tempo de treino diário", res[1], 50, 100, "Ótimo tempo de treino diário!", "Considere aumentar o tempo dos treinos.");
-                dicasHTML += gerarDica("Exercícios por semana", res[3], 60, 100, "Sua frequência de exercícios está excelente!", "Tente se exercitar mais vezes por semana.");
-                dicasHTML += gerarDica("Horas de sono", res[2], 70, 100, "Você está dormindo bem!", "Tente melhorar sua rotina de sono.");
-
-                dicasEl.innerHTML = dicasHTML;
             });
     </script>
 
