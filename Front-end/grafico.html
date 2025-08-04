@@ -123,10 +123,10 @@
                 console.log("Resposta recebida:", res);
 
                 if (Array.isArray(res) && res.length >= 4) {
-                    valores[0] = res[0]; // Água
-                    valores[1] = res[1]; // Tempo de treino
-                    valores[2] = res[3]; // Exercício semanal
-                    valores[3] = res[2]; // Sono
+                    valores[0] = Math.min(res[0], 100); // Água
+                    valores[1] = Math.min(res[1], 100); // Tempo de treino
+                    valores[2] = Math.min(res[3], 100); // Exercício semanal
+                    valores[3] = Math.min(res[2], 100); // Sono
 
                     grafico.update();
 
@@ -154,7 +154,8 @@
                     const receitasPorObjetivo = {
                         "perder": [
                             {
-                                refeicao: "Café da manhã", dica: "Frutas: 1 fatia de mamão </br> Cereais: 2 colheres de sopa de aveia </br> Pão: 1 fatia de pão integral </br> Ovos: 1 ovo cozido ou mexido sem óleo </br> Beber:1 xícara de café sem açúcar pode adoçar com canela ou adoçante." },
+                                refeicao: "Café da manhã", dica: "Frutas: 1 fatia de mamão </br> Cereais: 2 colheres de sopa de aveia </br> Pão: 1 fatia de pão integral </br> Ovos: 1 ovo cozido ou mexido sem óleo </br> Beber:1 xícara de café sem açúcar pode adoçar com canela ou adoçante."
+                            },
                             { refeicao: "Almoço", dica: "Salada: alface, tomate e cenoura ralada </br> Vegetais: abobrinha e chuchu cozidos </br> Verduras: espinafre refogado </br> Arroz integral: Possui teor de fibras e nutrientes essenciais </br> Fonte de proteína: 1 filé grelhado de frango" },
                             { refeicao: "Lanche", dica: "1 pote de iogurte natural + 1 colher de sopa de aveia." },
                             { refeicao: "Jantar", dica: "Fonte de proteína: omelete de 2 ovos com frango desfiado </br> Vegetais: legumes refogados </br> Arroz integral: O mais recomendado para o emagrecimento" }
@@ -194,8 +195,6 @@
             })
             .catch(erro => {
                 console.log("ERRO: " + erro);
-
-
             });
     </script>
 
