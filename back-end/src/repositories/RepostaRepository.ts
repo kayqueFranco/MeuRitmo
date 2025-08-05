@@ -73,8 +73,7 @@ export default class RespostaRepository implements Commands<Resposta> {
     
         let peso_cliente: number = peso;
     
-        console.log(objetivo);
-        console.log(agua)
+    
 
 
 
@@ -111,7 +110,7 @@ export default class RespostaRepository implements Commands<Resposta> {
                             if (erro) return reject(erro);
     
                             dados_resposta = result_resposta;
-                            console.log(dados_resposta);    
+                            console.log(dados_resposta);
     
                             if (dados_resposta[0].objetivo == "ganhar") {
                                 if (parseInt(dados_resposta[0].peso) <= parseInt(retorno_recomendado[0].peso)) {

@@ -23,7 +23,6 @@ app.post("/api/v1/resposta/preferencias",(req,res)=>{
     resp.cadastrarPreferencias(req,res)
 })
 
-
 //-------------------- USUARIO ------------------------
 
 app.get("/api/v1/usuario/listar", (req,res)=>{

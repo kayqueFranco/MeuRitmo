@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+#div-grafico {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+    height: 200px;
+}
+
+#dicas,
+#dados-usuario, #receitas {
+    max-width: 350px;
+    margin: 50px auto;
+    font-size: 18px;
+    padding: 40px;
+    box-shadow: 0px 0px 12px 1px rgb(97, 97, 97);
+    border-radius: 15px;
+}
+
+@media (min-width: 576px) {
+    #div-grafico {
+        max-width: 460px;
+        height: 300px;
+    }
+
+    #dicas,
+    #dados-usuario, #receitas {
+        max-width: 460px;
+    }
+}
+
+@media (min-width: 768px) {
+    #div-grafico {
+        max-width: 560px;
+    }
+
+    #dicas,
+    #dados-usuario, #receitas {
+        max-width: 560px;
+    }
+}
+
+@media (min-width: 992px) {
+    #div-grafico {
+        max-width: 700px;
+    }
+
+    #dicas,
+    #dados-usuario, #receitas {
+        max-width: 700px;
+    }
+}

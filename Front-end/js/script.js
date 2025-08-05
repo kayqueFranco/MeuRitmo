@@ -45,6 +45,11 @@ function coletarDados(event) {
         .then((resposta) => {
             console.log("Usuário cadastrado:", resposta.insertId);
             localStorage.setItem("id_usuario", resposta.insertId);
+<<<<<<< HEAD
+=======
+            localStorage.setItem("nome", nome);
+            localStorage.setItem("idade", idade);
+>>>>>>> 17bc423d8b211d4f60474bd4cab82f4b367030af
             localStorage.setItem("sexo", sexo);
             localStorage.setItem("peso", peso);
             localStorage.setItem("objetivo", objetivo);
@@ -96,15 +101,27 @@ function coletarPerguntas() {
         return;
     }
 
+<<<<<<< HEAD
+=======
+    alert(agua.value);
+
+>>>>>>> 17bc423d8b211d4f60474bd4cab82f4b367030af
     fetch("http://10.26.45.42:5000/api/v1/resposta/cadastro", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             id_usuario: parseInt(id_usuario),
+<<<<<<< HEAD
             agua: agua.value,
             exercicio_semanal: exercicio_semanal.value,
             tempo_treino: tempo_treino.value,
             sono: sono.value,
+=======
+            agua: parseInt(agua.value),
+            exercicio_semanal: parseInt(exercicio_semanal.value),
+            tempo_treino: parseInt(tempo_treino.value),
+            sono: parseInt(sono.value),
+>>>>>>> 17bc423d8b211d4f60474bd4cab82f4b367030af
             atividade_diaria: atividade_diaria.value,
             frutas_vegetais: frutas_vegetais.value,
             doces_fritura: doces_fritura.value,

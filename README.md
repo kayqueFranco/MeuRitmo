@@ -92,7 +92,6 @@ CREATE TABLE resposta (
 
 ## 📌 Funcionalidades
 
-* Cadastro e login de usuários
 * Registro de respostas sobre hábitos e estilo de vida
 * Armazenamento do objetivo do usuário (perder, ganhar ou manter peso)
 * Análise das respostas e hábitos do usuário
@@ -120,11 +119,7 @@ Com base nas respostas e dados registrados, o sistema:
 ## 🧹 Estrutura de Navegação (Seções)
 
 * Home
-* Cadastro/Login
 * Questionário
-* Histórico
-* Perfil do Usuário
-* Metas
 * Gráficos
 
 ---
