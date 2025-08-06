@@ -95,7 +95,6 @@ CREATE TABLE resposta (
 * Registro de respostas sobre hábitos e estilo de vida
 * Armazenamento do objetivo do usuário (perder, ganhar ou manter peso)
 * Análise das respostas e hábitos do usuário
-* Sugestão de metas personalizadas conforme respostas
 * Geração de gráficos que mostram se os hábitos estão adequados
 * Recomendações de exercícios e receitas com base no objetivo
 * Histórico de dados
@@ -111,7 +110,6 @@ Com base nas respostas e dados registrados, o sistema:
 * Analisa a qualidade dos hábitos do usuário (sono, hidratação, atividade, alimentação)
 * Compara os hábitos com o objetivo definido (perder peso, ganhar massa ou manter)
 * Gera gráficos e feedback visual sobre a adequação dos hábitos
-* Sugere metas específicas para melhorar pontos fracos
 * Indica receitas saudáveis e atividades físicas de acordo com o perfil do usuário
 
 ---
