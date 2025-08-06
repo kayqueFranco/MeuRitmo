@@ -34,9 +34,7 @@ Esta documentação descreve as principais funcionalidades e estrutura da interf
 
 ## 📌 Funcionalidades Principais
 
-* Cadastro e login de usuários com validações
-* Questionário de hábitos (água, sono, treino, alimentação)
-* Visualização e análise de metas baseadas nos objetivos
+* Questionário de hábitos (água, sono, treino, alimentação
 * Geração de gráficos com base nas respostas do usuário
 * Sugestão de atividades e dicas personalizadas
 * Layout responsivo e intuitivo
@@ -45,7 +43,7 @@ Esta documentação descreve as principais funcionalidades e estrutura da interf
 
 ## 🎨 Navegação
 
-A navegação é realizada por links e redirecionamentos após autenticação. As páginas estão divididas por tema: questionário, metas, gráficos e perfil.
+A navegação é realizada por links e redirecionamentos após autenticação. As páginas estão divididas por tema: questionário e gráficos.
 
 ---
 
