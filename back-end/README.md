@@ -19,12 +19,11 @@ Este documento descreve as principais funcionalidades e estrutura da API RESTful
 ```
 ├── src
 │   ├── classes         # Models/Entidades
-│   ├── controllers     # Controladores
 │   ├── database        # Conexão com banco
 │   ├── interfaces      # Interfaces para padronização
 │   ├── repository      # Lógica SQL
 │   ├── services        # Regras de negócio
-│   └── routes.ts       # Rotas da API
+│   └── app.ts       # Rotas da API
 ```
 
 ---
