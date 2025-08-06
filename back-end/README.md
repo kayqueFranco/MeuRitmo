@@ -28,35 +28,16 @@ Este documento descreve as principais funcionalidades e estrutura da API RESTful
 
 ---
 
-## 🔐 Autenticação
-
-* Login e geração de token JWT para sessões seguras.
-* Rotas protegidas com middleware de autenticação.
-
-### Exemplo de login:
-
-```json
-POST /login
-{
-  "email": "usuario@email.com",
-  "senha": "123456"
-}
-```
-
----
-
 ## 📂 Endpoints da API
 
 ### Usuário
 
 * `POST /usuario` → Cadastrar usuário
 * `GET /usuario` → Listar todos os usuários
-* `GET /usuario/:id` → Buscar usuário por ID
 
 ### Resposta
 
 * `POST /resposta` → Registrar questionário do usuário
-* `GET /resposta/:id_usuario` → Buscar respostas do usuário
 
 ---
 
@@ -122,12 +103,6 @@ CREATE TABLE resposta (
 
 ---
 
-## 🛡️ Segurança
-
-* Hash de senhas com `bcryptjs`
-* Sessões seguras com `jsonwebtoken`
-
----
 
 ## 📦 Instalação e Execução
 
